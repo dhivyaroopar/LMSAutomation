@@ -10,7 +10,9 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import io.cucumber.java.After;
+import io.cucumber.java.AfterAll;
 import io.cucumber.java.AfterStep;
+import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import utilities.TestContextSetup;
 
@@ -19,6 +21,11 @@ TestContextSetup testContextSetup;
 
 	public Hooks(TestContextSetup testContextSetup) {
 		this.testContextSetup=testContextSetup;
+	}
+	
+	@Before("@LoginPreCondition")
+	public void LogintoLMSPortal() {
+		
 	}
 	
 	@After

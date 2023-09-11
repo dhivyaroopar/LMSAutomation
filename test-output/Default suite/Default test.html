@@ -1,0 +1,1646 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>71/17/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Sep 10 17:24:04 PDT 2023</td>
+</tr>
+<tr><td>Total time:</td><td>7 seconds (7030 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify pagination controls enabled", "Pagination in manage attendance"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin is on dashboard page after Login&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given(&quot;Admin is on dashboard page after Login&quot;)
+public void admin_is_on_dashboard_page_after_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2027056914", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2027056914'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin is on dashboard page after Login&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given(&quot;Admin is on dashboard page after Login&quot;)
+public void admin_is_on_dashboard_page_after_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify admin is able to navigate from manage attendance to program page", "Navigation function validation from manage attendance page to other pages"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin clicks &quot;Program&quot; button in the navigation bar in attendance&apos; and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When(&quot;Admin clicks {string} button in the navigation bar in attendance&quot;)
+public void admin_clicks_button_in_the_navigation_bar_in_attendance(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;Admin should able to land on program page from attendance&quot;)
+public void admin_should_able_to_land_on_program_page_from_attendance() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1790009136", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1790009136'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin clicks &quot;Program&quot; button in the navigation bar in attendance&apos; and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When(&quot;Admin clicks {string} button in the navigation bar in attendance&quot;)
+public void admin_clicks_button_in_the_navigation_bar_in_attendance(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;Admin should able to land on program page from attendance&quot;)
+public void admin_should_able_to_land_on_program_page_from_attendance() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify admin is able to navigate from manage attendance to batch page", "Navigation function validation from manage attendance page to other pages"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin clicks &quot;Batch&quot; button in the navigation bar in attendance&apos; and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When(&quot;Admin clicks {string} button in the navigation bar in attendance&quot;)
+public void admin_clicks_button_in_the_navigation_bar_in_attendance(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;Admin should able to land on batch page from attendance&quot;)
+public void admin_should_able_to_land_on_batch_page_from_attendance() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1943212720", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1943212720'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin clicks &quot;Batch&quot; button in the navigation bar in attendance&apos; and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When(&quot;Admin clicks {string} button in the navigation bar in attendance&quot;)
+public void admin_clicks_button_in_the_navigation_bar_in_attendance(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;Admin should able to land on batch page from attendance&quot;)
+public void admin_should_able_to_land_on_batch_page_from_attendance() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify right arrow is enable when sheet two is displayed in data table when entries are more than 10", "Pagination in manage attendance"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin is on dashboard page after Login&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given(&quot;Admin is on dashboard page after Login&quot;)
+public void admin_is_on_dashboard_page_after_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1624411636", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1624411636'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin is on dashboard page after Login&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given(&quot;Admin is on dashboard page after Login&quot;)
+public void admin_is_on_dashboard_page_after_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify adminshould able to do logout function from manage attendance", "Navigation function validation from manage attendance page to other pages"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin clicks &quot;Logout&quot; button in the navigation bar in attendance&apos; and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When(&quot;Admin clicks {string} button in the navigation bar in attendance&quot;)
+public void admin_clicks_button_in_the_navigation_bar_in_attendance(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;Admin should able to land on login page from attendance&quot;)
+public void admin_should_able_to_land_on_login_page_from_attendance() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div><a href='#' onClick='toggleBox("stack-trace874514150", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace874514150'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin clicks &quot;Logout&quot; button in the navigation bar in attendance&apos; and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When(&quot;Admin clicks {string} button in the navigation bar in attendance&quot;)
+public void admin_clicks_button_in_the_navigation_bar_in_attendance(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;Admin should able to land on login page from attendance&quot;)
+public void admin_should_able_to_land_on_login_page_from_attendance() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify left arrow is disable when sheet one is displayed in data table", "Pagination in manage attendance"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin is on dashboard page after Login&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given(&quot;Admin is on dashboard page after Login&quot;)
+public void admin_is_on_dashboard_page_after_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div><a href='#' onClick='toggleBox("stack-trace232441873", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace232441873'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin is on dashboard page after Login&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given(&quot;Admin is on dashboard page after Login&quot;)
+public void admin_is_on_dashboard_page_after_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate reject in alert", "Delete attendance validation"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin is in delete alert after clicking row level delete button on manage attendance page&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given(&quot;Admin is in delete alert after clicking row level delete button on manage attendance page&quot;)
+public void admin_is_in_delete_alert_after_clicking_row_level_delete_button_on_manage_attendance_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div><a href='#' onClick='toggleBox("stack-trace616180823", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace616180823'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin is in delete alert after clicking row level delete button on manage attendance page&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given(&quot;Admin is in delete alert after clicking row level delete button on manage attendance page&quot;)
+public void admin_is_in_delete_alert_after_clicking_row_level_delete_button_on_manage_attendance_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify admin is able to navigate from manage attendance to assignment page", "Navigation function validation from manage attendance page to other pages"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin clicks &quot;Assignment&quot; button in the navigation bar in attendance&apos; and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When(&quot;Admin clicks {string} button in the navigation bar in attendance&quot;)
+public void admin_clicks_button_in_the_navigation_bar_in_attendance(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;Admin should able to land on Assignment page from attendance&quot;)
+public void admin_should_able_to_land_on_assignment_page_from_attendance() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1529758782", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1529758782'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin clicks &quot;Assignment&quot; button in the navigation bar in attendance&apos; and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When(&quot;Admin clicks {string} button in the navigation bar in attendance&quot;)
+public void admin_clicks_button_in_the_navigation_bar_in_attendance(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;Admin should able to land on Assignment page from attendance&quot;)
+public void admin_should_able_to_land_on_assignment_page_from_attendance() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify admin is able to navigate from manage attendance to attendance page", "Navigation function validation from manage attendance page to other pages"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin clicks &quot;Class&quot; button in the navigation bar in attendance&apos; and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When(&quot;Admin clicks {string} button in the navigation bar in attendance&quot;)
+public void admin_clicks_button_in_the_navigation_bar_in_attendance(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;Admin should able to land on class page from attendance&quot;)
+public void admin_should_able_to_land_on_class_page_from_attendance() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1986222739", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1986222739'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin clicks &quot;Class&quot; button in the navigation bar in attendance&apos; and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When(&quot;Admin clicks {string} button in the navigation bar in attendance&quot;)
+public void admin_clicks_button_in_the_navigation_bar_in_attendance(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;Admin should able to land on class page from attendance&quot;)
+public void admin_should_able_to_land_on_class_page_from_attendance() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify pagination controls disabled", "Pagination in manage attendance"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin is on dashboard page after Login&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given(&quot;Admin is on dashboard page after Login&quot;)
+public void admin_is_on_dashboard_page_after_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1537053647", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1537053647'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin is on dashboard page after Login&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given(&quot;Admin is on dashboard page after Login&quot;)
+public void admin_is_on_dashboard_page_after_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify sheet one is displayed on default in data table", "Pagination in manage attendance"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin is on dashboard page after Login&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given(&quot;Admin is on dashboard page after Login&quot;)
+public void admin_is_on_dashboard_page_after_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div><a href='#' onClick='toggleBox("stack-trace688247677", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace688247677'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin is on dashboard page after Login&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given(&quot;Admin is on dashboard page after Login&quot;)
+public void admin_is_on_dashboard_page_after_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify right arrow is disable when sheet two is displayed in data table when entries are less than 10", "Pagination in manage attendance"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin is on dashboard page after Login&apos; and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given(&quot;Admin is on dashboard page after Login&quot;)
+public void admin_is_on_dashboard_page_after_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;Data table should display page {int} when entries available&quot;)
+public void data_table_should_display_page_when_entries_available(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2027273900", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2027273900'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin is on dashboard page after Login&apos; and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given(&quot;Admin is on dashboard page after Login&quot;)
+public void admin_is_on_dashboard_page_after_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;Data table should display page {int} when entries available&quot;)
+public void data_table_should_display_page_when_entries_available(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify right arrow is enable when sheet one is displayed in data table", "Pagination in manage attendance"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin is on dashboard page after Login&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given(&quot;Admin is on dashboard page after Login&quot;)
+public void admin_is_on_dashboard_page_after_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div><a href='#' onClick='toggleBox("stack-trace505122850", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace505122850'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin is on dashboard page after Login&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given(&quot;Admin is on dashboard page after Login&quot;)
+public void admin_is_on_dashboard_page_after_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify admin is able to navigate from manage attendance to user page", "Navigation function validation from manage attendance page to other pages"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin clicks &quot;User&quot; button in the navigation bar in attendance&apos; and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When(&quot;Admin clicks {string} button in the navigation bar in attendance&quot;)
+public void admin_clicks_button_in_the_navigation_bar_in_attendance(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;Admin should able to land on user page from attendance&quot;)
+public void admin_should_able_to_land_on_user_page_from_attendance() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div><a href='#' onClick='toggleBox("stack-trace490240034", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace490240034'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin clicks &quot;User&quot; button in the navigation bar in attendance&apos; and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When(&quot;Admin clicks {string} button in the navigation bar in attendance&quot;)
+public void admin_clicks_button_in_the_navigation_bar_in_attendance(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;Admin should able to land on user page from attendance&quot;)
+public void admin_should_able_to_land_on_user_page_from_attendance() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify admin is able to navigate from manage attendance to student page", "Navigation function validation from manage attendance page to other pages"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin clicks &quot;Student&quot; button in the navigation bar in attendance&apos; and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When(&quot;Admin clicks {string} button in the navigation bar in attendance&quot;)
+public void admin_clicks_button_in_the_navigation_bar_in_attendance(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;Admin should able to land on student page from attendance&quot;)
+public void admin_should_able_to_land_on_student_page_from_attendance() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div><a href='#' onClick='toggleBox("stack-trace381087754", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace381087754'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin clicks &quot;Student&quot; button in the navigation bar in attendance&apos; and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When(&quot;Admin clicks {string} button in the navigation bar in attendance&quot;)
+public void admin_clicks_button_in_the_navigation_bar_in_attendance(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;Admin should able to land on student page from attendance&quot;)
+public void admin_should_able_to_land_on_student_page_from_attendance() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate accept in alert", "Delete attendance validation"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin is in delete alert after clicking row level delete button on manage attendance page&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given(&quot;Admin is in delete alert after clicking row level delete button on manage attendance page&quot;)
+public void admin_is_in_delete_alert_after_clicking_row_level_delete_button_on_manage_attendance_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div><a href='#' onClick='toggleBox("stack-trace591446686", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace591446686'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin is in delete alert after clicking row level delete button on manage attendance page&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given(&quot;Admin is in delete alert after clicking row level delete button on manage attendance page&quot;)
+public void admin_is_in_delete_alert_after_clicking_row_level_delete_button_on_manage_attendance_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify left arrow is enable when sheet two is displayed in data table", "Pagination in manage attendance"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin is on dashboard page after Login&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given(&quot;Admin is on dashboard page after Login&quot;)
+public void admin_is_on_dashboard_page_after_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1859425802", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1859425802'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Admin is on dashboard page after Login&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given(&quot;Admin is on dashboard page after Login&quot;)
+public void admin_is_on_dashboard_page_after_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate admin able to create new attendance by selecting future date", "Adding and Editing New Attendance"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate admin able to create new attendance data without attendances", "Adding and Editing New Attendance"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate admin able to create new attendance by selecting future date", "Adding and Editing New Attendance"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify delete icon when no data in the table", "Manage Attendance Page verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate response time from dashboard page to attendance page", "Manage Attendance Page verification"</td>
+<td></td>
+<td>1</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate the number entries displaying", "Manage Attendance Page verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate admin able to create new attendance data without program name", "Adding and Editing New Attendance"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify data table on the attendance page", "Manage Attendance Page verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "validate date picker should be correct format", "Attendance details popup verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate admin able to update  attendance data", "Adding and Editing New Attendance"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate footer text", "Manage Attendance Page verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify save button is present", "Attendance details popup window verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Edit icon when no data in the table", "Manage Attendance Page verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify close button in attendance details popup window", "Attendance details popup window verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Delete attendance alert", "Delete attendance validation"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate admin able to update attendance data without program name", "Adding and Editing New Attendance"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate admin able to update attendance data without class name", "Adding and Editing New Attendance"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate admin able to create new attendance data without attendance date", "Adding and Editing New Attendance"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify reject enabled in alert", "Delete attendance validation"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate date picker", "Attendance details popup verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify next page is disabled in pagination", "Adding and Editing New Attendance"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate the header of the page", "Manage Attendance Page verification"</td>
+<td></td>
+<td>1</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate selected date is highlighted in the date picker", "Attendance details popup verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify dropdown box is present", "Attendance details popup window verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify delete icon in the data table", "Manage Attendance Page verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify LMS title", "Manage Attendance Page verification"</td>
+<td></td>
+<td>1</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate admin able to create new attendance data without class name", "Adding and Editing New Attendance"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify delete multiple class button is enabled", "Delete Multiple Attendance Validation"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify  accept enabled in alert", "Delete attendance validation"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify delete icon below the header", "Manage Attendance Page verification"</td>
+<td></td>
+<td>1</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the text on fourth dropdown select attendance", "Attendance details popup window verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify tick mark is visible after clicking on check box for single data", "Delete Multiple Attendance Validation"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate the broken link", "Manage Attendance Page verification"</td>
+<td></td>
+<td>1</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify data table on the attendance page", "Manage Attendance Page verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify all label text", "Attendance details popup window verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify admin able to click multiple check box", "Delete Multiple Attendance Validation"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the text on second dropdown select class name", "Attendance details popup window verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the alignment of the close button", "Attendance details popup window verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify search bar on the class page", "Manage Attendance Page verification"</td>
+<td></td>
+<td>1</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the alignment of the Manage Attendance header", "Manage Attendance Page verification"</td>
+<td></td>
+<td>1</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Pagination control below the data table", "Manage Attendance Page verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify sort icon in the data table", "Manage Attendance Page verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate admin able to create new attendance data without student name", "Adding and Editing New Attendance"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify next page is enabled in pagination", "Adding and Editing New Attendance"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify cancel button is present", "Attendance details popup window verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the text on third dropdown select students", "Attendance details popup window verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate admin able to create new attendance data without student name", "Adding and Editing New Attendance"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate text in manage attendancepage", "Manage Attendance Page verification"</td>
+<td></td>
+<td>1</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify accept alert in delete multiple attendance by selecting multiple checkbox", "Delete Multiple Attendance Validation"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify reject alert in delete multiple attendance by selecting single checkbox", "Delete Multiple Attendance Validation"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Edit icon in the data table", "Manage Attendance Page verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate all class name  is reflecting in the dropdown", "Attendance details popup verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate attendance field dropdown all mandatory keywords", "Attendance details popup verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate right arrow in data picker to navigate to next month", "Attendance details popup verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify spellings in the attendance field drop down", "Attendance details popup verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify data table on the attendance page", "Manage Attendance Page verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the text on first dropdown select a program name", "Attendance details popup window verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate all program name is reflecting in the dropdown", "Attendance details popup verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate left arrow in data picker to navigate to previous month", "Attendance details popup verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify data table on the attendance page", "Manage Attendance Page verification"</td>
+<td></td>
+<td>1</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify accept alert in delete multiple attendance by selecting single checkbox", "Delete Multiple Attendance Validation"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate admin able to create new attendance data without attendances", "Adding and Editing New Attendance"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate admin able to create new attendance data without attendance date", "Adding and Editing New Attendance"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate current date is highlighted in the date picker", "Attendance details popup verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify all the text inside the dropdown box is gray color", "Attendance details popup window verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify data table on the attendance page", "Manage Attendance Page verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify check box in the data table", "Manage Attendance Page verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify order of the label in attendance details page", "Attendance details popup window verification"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify add new Attendance button  on Attendance page", "Manage Attendance Page verification"</td>
+<td></td>
+<td>1</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate admin able to create new attendance data", "Adding and Editing New Attendance"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+<tr>
+<td title='testrunners.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify reject alert in delete multiple attendance by selecting multiple checkbox", "Delete Multiple Attendance Validation"</td>
+<td></td>
+<td>0</td>
+<td>testrunners.TestNGTestRunner@7d8995e</td></tr>
+</table><p>
+</body>
+</html>
