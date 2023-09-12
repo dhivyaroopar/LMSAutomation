@@ -40,10 +40,11 @@ Given Admin is on dashboard page after Login in program
 When Admin clicks "Program" on the navigation bar in program
 Then Admin should see the number of records (rows of data in the table) displayed on the page are 5 in program
 #8
-Scenario: Verify data table on the Program page
+Scenario Outline: Verify data table on the Program page
 Given Admin is on dashboard page after Login in program
 When Admin clicks "Program" on the navigation bar in program
 Then Admin should see data table on the Manage Program Page with following column headers in program
+Examples:
 |coulumn headers|
 |Program Name| 
 |Program Description| 
@@ -76,26 +77,38 @@ Background:
 Given Admin is on dashboard page after Login and clicks Program on the navigation bar
 
 #13
-Scenario: Search Program By Name
+Scenario Outline: Search Program By Name
 Given Admin is on Manage Program Page in program
-When Admin enters <Program name phrase> into search box in program.
+When Admin enters "<Program name phrase>" into search box in program.
 Then Admin should see the Programs displayed based on the Program Name in program
+Examples:
+|Program Name|
+|jan_techwarrior|
+
 #14
-Scenario: Search Program By Description
+Scenario Outline: Search Program By Description
 Given Admin is on Manage Program Page in program
-When Admin enters <Program description phrase> into search box in program.
+When Admin enters "<Program description phrase>" into the search box in program.
 Then Admin should see the Programs displayed based on the Program Description in program
+Examples:
+|Program Description|
+|jan_TechWarrior_sdet_Desc|
 #15
-Scenario: Search Program By Status
+Scenario Outline: Search Program By Status
 Given Admin is on Manage Program Page in program
-When Admin enters <Program status phrase> into search box in program.
+When Admin enters "<Program status phrase>" in search box in program.
 Then Admin should see the Programs displayed based on the Program Status in program
+Examples:
+|Program Status|
+|Active|
+
 #16
 Scenario: Validating the Search with unrelated keyword
 Given Admin is on Manage Program Page in program
-When Admin enters the keywords not present in the data table on the Search box in program 
+When Admin enters the keywords not present in the data table "elephant" on the Search box in program 
 Then Admin should see zero entries on the data table in program
-
+Examples:
+|elephant|
 
 
 

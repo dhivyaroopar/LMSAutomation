@@ -16,14 +16,20 @@ Given Admin is on Manage Program Page after clicks Program on the navigation bar
 #2
 Scenario: Edit Program Name
 Given Admin is on Program Details Popup window to Edit in program
-When Admin edits the Name column and clicks save button in program
+When Admin edits the "Name column" and clicks save button in program
 Then Admin gets a message "Successful Program Updated" alert and able to see the updated name in the table for the particular program in program
-
+Examples:
+|Sheetname|RowNumber|
+|program|5|
 #3
 Scenario: Edit Program description
 Given Admin is on Program Details Popup window to Edit in program
-When Admin edits the Description column and clicks save button in program
+When Admin edits the "Description column" and then
+ clicks save button in program
 Then Admin gets a message "Successful Program Updated" alert and able to see the updated description in the table for the particular program in program
+Examples:
+|Sheetname|RowNumber|
+|program|6|
 
 #4
 Scenario: Change Program Status

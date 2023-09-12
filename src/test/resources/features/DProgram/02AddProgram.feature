@@ -27,49 +27,58 @@ Given Admin is on Manage Program Page after clicks Program on the navigation bar
 
 #4
 Scenario: Empty form submission
-Given Admin is on "Program Details" Popup window in program
+Given Admin is on Program Details Popup window in program
 When Admin clicks <Save>button without entering any data in program
-Then Admin gets a Error message alert in program
+Then Admin gets a Error message alert "fill the details" in program
 
 #5
 Scenario: Enter only Program Name
-Given Admin is on "Program Details" Popup window in program
+Given Admin is on Program Details Popup window in program
 When Admin enters only<Program Name> in text box and clicks Save button in program
 Then Admin gets a message alert 'Description is required' in program
-
+Examples:
+|Sheetname|RowNumber|
+|program|1|
 #6
 Scenario: Enter only Program Description
-Given Admin is on "Program Details" Popup window in program
+Given Admin is on Program Details Popup window in program
 When Admin enters only<Program description> in text box and clicks Save button in program
 Then Admin gets a message alert 'Name is required' in program
+Examples:
+|Sheetname|RowNumber|
+|program|2|
 
 #7
 Scenario: Select Status only
-Given Admin is on "Program Details" Popup window in program
+Given Admin is on Program Details Popup window in program
 When Admin selects only Status and clicks Save button in program
 Then Admin gets a message alert 'Name and Description required' in program
 
 #8
 Scenario: Validate invalid values on the text column
-Given Admin is on "Program Details" Popup window in program
+Given Admin is on Program Details Popup window in program
 When Admin enters only numbers or special char in name and desc column in program
 Then Admin gets a Error message alert in program
-
+Examples:
+|Sheetname|RowNumber|
+|program|3|
 #9 
 Scenario: Validate Cancel/Close(X) icon on Program Details form
-Given Admin is on "Program Details" Popup window in program
-When Admin clicks Cancel/Close(X) Icon on Program Details form in program
+Given Admin is on Program Details Popup window in program
+When Admin clicks Cancel or Close Icon on Program Details form in program
 Then Program Details popup window should be closed without saving in program
 
 #10
 Scenario: Validate Save button on Program Details form
-Given Admin is on "Program Details" Popup window in program
+Given Admin is on Program Details Popup window in program
 When Enter all the required fields with valid values and click Save button in program
 Then Admin gets a message "Successful Program Created" alert and able to see the new program added in the data table in program
-
+Examples:
+|Sheetname|RowNumber|
+|program|4|
 #11
 Scenario: Validate Cancel button on Program Details form
-Given Admin is on "Program Details" Popup window in program
+Given Admin is on Program Details Popup window in program
 When Admin clicks <Cancel>button in program
 Then Admin can see the Program details popup disappears without creating any program in program
 

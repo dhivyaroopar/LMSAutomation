@@ -1,25 +1,41 @@
 package stepdefinitions;
 
-import io.cucumber.java.en.*;
+import java.io.IOException;
 
+import org.openqa.selenium.WebDriver;
+
+import io.cucumber.java.en.*;
+import pages.BatchPage;
+import pages.ProgramPage;
+import utilities.TestBase;
+import utilities.TestContextSetup;
+import org.openqa.selenium.WebDriver;
 public class BatchPageStepDefinition {
+	public WebDriver driver;
+	TestContextSetup testContextSetup;
+	BatchPage batchPage;
+	TestBase Tsb;
+	public BatchPageStepDefinition(TestContextSetup testContextSetup) {
+		this.testContextSetup=testContextSetup;
+		this.batchPage=testContextSetup.pageObjectManager.getBatchPage();
+		this.programPage=testContextSetup.pageObjectManager.getProgramPage();
+
+	}
 //BATCHPAGEVALIDATION_SD
 	@Given("Logged on the LMS portal")
-	public void logged_on_the_lms_portal() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void logged_on_the_lms_portal() throws IOException {
+		Tsb.WebDriverManager().get("https://lms.app.com/LMSlogin");
+		 
 	}
 
 	@Given("Admin is on dashboard page after Login in batch")
-	public void admin_is_on_dashboard_page_after_login_in_batch() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void admin_is_on_dashboard_page_after_login_in_batch() throws IOException {
+		Tsb.WebDriverManager().get("https://lms.app.com/LMSdashboard");
 	}
 
 	@When("Admin clicks {string} from navigation bar in batch")
 	public void admin_clicks_from_navigation_bar_in_batch(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		programPage.clickondashboard();
 	}
 
 	@Then("Admin should see the {string} in the URL in batch")

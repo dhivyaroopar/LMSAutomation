@@ -4,25 +4,21 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import io.cucumber.java.en.*;
 import pages.ProgramPage;
-import utilities.ExcelReader;
-import utilities.LoggerLoad;
 import utilities.TestBase;
 import utilities.TestContextSetup;
 
-public class ProgramPageStepDefinition {
+public class ProgramPageStepDefinition2 {
 //MANAGEVALIDATION-SD	
 	public WebDriver driver;
 	TestContextSetup testContextSetup;
 	ProgramPage programPage;
 	TestBase Tsb;
-	ExcelReader reader ;
-	public ProgramPageStepDefinition(TestContextSetup testContextSetup) {
+	public ProgramPageStepDefinition2(TestContextSetup testContextSetup) {
 		this.testContextSetup=testContextSetup;
 		this.programPage=testContextSetup.pageObjectManager.getProgramPage();
 	}
@@ -30,7 +26,6 @@ public class ProgramPageStepDefinition {
 
  @Given("Logged on the LMS portal as Admin")
 public void logged_on_the_lms_portal_as_admin() {
-	 LoggerLoad.info("Logged on the LMS portal as Admin");
     //temp
 	 testContextSetup.testBase.WebDriverManager().get("https://lms.app.com/LMSlogin");
 	 programPage.clicklogin();//from login stepdef
@@ -38,32 +33,27 @@ public void logged_on_the_lms_portal_as_admin() {
 
 	@Given("Admin is on dashboard page after Login in program")
 	public void admin_is_on_dashboard_page_after_login_in_program() throws IOException {
-		 LoggerLoad.info("Admin is on dashboard page after Login in program");
-
 		testContextSetup.testBase.WebDriverManager().get("https://lms.app.com/LMSdashboard");
 	}
 
 	@When("Admin clicks {string} on the navigation bar in program")
 	public void admin_clicks_on_the_navigation_bar_in_program(String string) {
-		LoggerLoad.info("Admin clicks {string} on the navigation bar in program");
 		programPage.clicklinkondashboard(string);	}
 
 	@Then("Admin should see URL with {string} in program")
 	public void admin_should_see_url_with_in_program(String url) throws IOException {
-		LoggerLoad.info("Admin should see URL with {string} in program");
-		String title="https://lms.app.com/Manage program";
+      String title="https://lms.app.com/Manage program";
 		 Assert.assertEquals(title.contains("Manage program"),url);}
 
 	@Then("Admin should see a heading with text {string} on the page in program")
 	public void admin_should_see_a_heading_with_text_on_the_page_in_program(String hdng) {
-		LoggerLoad.info("Admin should see a heading with text {string} on the page in program");
+		
 		String headingtext=programPage.appearonheading();
 		 Assert.assertEquals(headingtext,hdng);
 }
 
 	@Then("Admin should see the text as {string} along with Pagination icon in program.")
 	public void admin_should_see_the_text_as_along_with_pagination_icon_below_the_table_in_program(String pagination) {
-		LoggerLoad.info("Admin should see the text as {string} along with Pagination icon in program.");
 		String paginationtext=programPage.appearonpaginationicon();
 		 Assert.assertEquals(paginationtext,pagination);
 
@@ -71,15 +61,12 @@ public void logged_on_the_lms_portal_as_admin() {
 
 	@Then("Admin should see the footer as {string} in program.")
 	public void admin_should_see_the_footer_as_in_program(String totalzentry) {
-		LoggerLoad.info("Admin should see the footer as {string} in program.");
-
 		String ttlentries=programPage.totalentiespaginationicon();
 		Assert.assertEquals(ttlentries,totalzentry);
 	}
 
 	@Then("Admin should see a Delete button on the top left hand side as Disabled in program")
 	public void admin_should_see_a_delete_button_on_the_top_left_hand_side_as_disabled_in_program() {
-		LoggerLoad.info("Admin should see a Delete button on the top left hand side as Disabled in program");
 		boolean disabled=programPage.checkdisableddeleteicon();
 		Assert.assertEquals(disabled,false);
 	}
@@ -129,7 +116,7 @@ public void logged_on_the_lms_portal_as_admin() {
 
 	@Given("Admin is on Manage Program Page in program")
 	public void admin_is_on_manage_program_page_in_program() throws IOException {
-		testContextSetup.testBase.WebDriverManager().get("https://lms.app.com/Manage program");
+		testContextSetup.testBase.WebDriverManager().get("url");
  
 	}
 
@@ -141,8 +128,7 @@ public void logged_on_the_lms_portal_as_admin() {
 
 	@Then("Admin should see the Programs based on the Program Name in program")
 	public void admin_should_see_the_programs_based_on_the_program_name_in_program() {
-		//programPage.displayenternameinsearch();
-		programPage.searchforprogname();}
+		programPage.displayenternameinsearch();	}
 
 	@When("Admin enters {string} into the search box in program.")
 	public void admin_enters_into_the_search_box_in_program(String programdescription) {
@@ -151,262 +137,250 @@ public void logged_on_the_lms_portal_as_admin() {
 
 	@Then("Admin should see the Programs displayed based on the Program Description in program")
 	public void admin_should_see_the_programs_displayed_based_on_the_program_description_in_program() {
-		//programPage.displayenternameinsearch();
-		programPage.searchforprogdescription();
+		programPage.displayenternameinsearch();
 	}
 
 	@When("Admin enters {string} in search box in program.")
 	public void admin_enters_in_search_box_in_program(String programstatus) {
-		programPage.enterinsearch(programstatus);	}
+		programPage.enterinsearch(programstatus);
+	}
 
 	@Then("Admin should see the Programs displayed based on the Program Status in program")
 	public void admin_should_see_the_programs_displayed_based_on_the_program_status_in_program() {
-		//programPage.displayenternameinsearch();
-		programPage.searchforprogstatus();
-
+		programPage.displayenternameinsearch();
    }
 
 	@When("Admin enters the keywords not present in the data table {string} on the Search box in program")
 	public void admin_enters_the_keywords_not_present_in_the_data_table_on_the_search_box_in_program(String notrelated) {
 		programPage.enterinsearch(notrelated);
-		
 	}
 
 	@Then("Admin should see zero entries on the data table in program")
-	public void admin_should_see_zero_entries_on_the_data_table_in_program() {
-		programPage.searchwithzeroentries();
-		
+	public void admin_should_see_zero_entries_on_the_data_table_in_program(String pagination) {
+		programPage.displayenternameinsearch();
+		String paginationtext=programPage.appearonpaginationicon();
+		 Assert.assertEquals(paginationtext,pagination);
 	}
 
 
 //ADDPROGRAM-SD
 	@Given("Admin is on dashboard page after Login and clicks Program on the navigation bar")
-	public void admin_is_on_dashboard_page_after_login_and_clicks_program_on_the_navigation_bar(String string) throws IOException {
-		testContextSetup.testBase.WebDriverManager().get("https://lms.app.com/LMSdashboard");
-		programPage.clicklinkondashboard(string);
+	public void admin_is_on_dashboard_page_after_login_and_clicks_program_on_the_navigation_bar() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 	@When("Admin clicks <A New Program>button in program")
 	public void admin_clicks_a_new_program_button_in_program() {
-		programPage.clicknewprogram();
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 	@Then("Admin should see a popup open for Program details with empty form along with <SAVE> and <CANCEL> button and Close\\(X) Icon on the top right corner of the window in program")
 	public void admin_should_see_a_popup_open_for_program_details_with_empty_form_along_with_save_and_cancel_button_and_close_x_icon_on_the_top_right_corner_of_the_window_in_program() {
-		programPage.clickbtnscheckinaddprog();
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 	@Then("Admin should see two input fields and their respective text boxes in the program details window in program")
 	public void admin_should_see_two_input_fields_and_their_respective_text_boxes_in_the_program_details_window_in_program() {
-		programPage.textboxcheckinaddprog();
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 	@Then("Admin should see two radio button for Program Status in program")
 	public void admin_should_see_two_radio_button_for_program_status_in_program() {
-		programPage.popaddprogrmaradiobutton();
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 	@Given("Admin is on Manage Program Page after clicks Program on the navigation bar")
-	public void admin_is_on_manage_program_page_after_clicks_program_on_the_navigation_bar() throws IOException {
-		testContextSetup.testBase.WebDriverManager().get("https://lms.app.com/Manage program");
-
+	public void admin_is_on_manage_program_page_after_clicks_program_on_the_navigation_bar() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
-	@Given("Admin is on Program Details Popup window in program")
-	public void admin_is_on_Program_Detailspopup_window_in_program(String string) {
-		programPage.clicknewprogram();
+	@Given("Admin is on {string} Popup window in program")
+	public void admin_is_on_popup_window_in_program(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 	@When("Admin clicks <Save>button without entering any data in program")
 	public void admin_clicks_save_button_without_entering_any_data_in_program() {
-		programPage.clicksavebtn();
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
-	@Then("Admin gets a Error message alert {string} in program")
-	public void admin_gets_a_error_message_alert_in_program(String failmsg) {
-		String unsucess=programPage.alertmsg();
-		Assert.assertEquals(unsucess,failmsg);
-
+	@Then("Admin gets a Error message alert in program")
+	public void admin_gets_a_error_message_alert_in_program() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 	@When("Admin enters only<Program Name> in text box and clicks Save button in program")
-	public void admin_enters_only_program_name_in_text_box_and_clicks_save_button_in_program(String Sheetname,int RowNumber) throws InvalidFormatException, IOException {
-		List<Map<String,String>> data=reader.getData("./src/test/resources/ProjectExcelSheets/tryEditor.xlsx" , Sheetname);
-		String cellvalue1=data.get(RowNumber).get("ProgramName");
-		programPage.entertextprogramname(cellvalue1);
-		
-		programPage.clicksavebtn();
+	public void admin_enters_only_program_name_in_text_box_and_clicks_save_button_in_program() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 	@Then("Admin gets a message alert {string} in program")
-	public void admin_gets_a_message_alert_in_program(String failmsg) {
-		String unsucess=programPage.alertmsg();
-		Assert.assertEquals(unsucess,failmsg);
-
+	public void admin_gets_a_message_alert_in_program(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 	@When("Admin enters only<Program description> in text box and clicks Save button in program")
-	public void admin_enters_only_program_description_in_text_box_and_clicks_save_button_in_program(String Sheetname,int RowNumber) throws InvalidFormatException, IOException {
-		List<Map<String,String>> data=reader.getData("./src/test/resources/ProjectExcelSheets/tryEditor.xlsx" , Sheetname);
-		String cellvalue1=data.get(RowNumber).get("ProgramDesc");
-		programPage.entertextprogramdescription(cellvalue1);
-		
-		programPage.clicksavebtn(); 
+	public void admin_enters_only_program_description_in_text_box_and_clicks_save_button_in_program() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 	@When("Admin selects only Status and clicks Save button in program")
 	public void admin_selects_only_status_and_clicks_save_button_in_program() {
-		programPage.clickradiobtnprogramstatusactive();
-		programPage.clicksavebtn(); 
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 	@When("Admin enters only numbers or special char in name and desc column in program")
-	public void admin_enters_only_numbers_or_special_char_in_name_and_desc_column_in_program(String Sheetname,int RowNumber) throws InvalidFormatException, IOException {
-		List<Map<String,String>> data=reader.getData("./src/test/resources/ProjectExcelSheets/tryEditor.xlsx" , Sheetname);
-		String cellvalue1=data.get(RowNumber).get("ProgramName");
-		String cellvalue2=data.get(RowNumber).get("ProgramDesc");
-		programPage.entertextprogramname(cellvalue1);
-
-		programPage.entertextprogramdescription(cellvalue2);
-		
-		programPage.clicksavebtn();
+	public void admin_enters_only_numbers_or_special_char_in_name_and_desc_column_in_program() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
-	@When("Admin clicks Cancel or Close Icon on Program Details form in program")
+	@When("Admin clicks Cancel\\/Close\\(X) Icon on Program Details form in program")
 	public void admin_clicks_cancel_close_x_icon_on_program_details_form_in_program() {
-		programPage.clickcancelbtn();
-		programPage.clickclosebtn();
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 	@Then("Program Details popup window should be closed without saving in program")
-	public void program_details_popup_window_should_be_closed_without_saving_in_program() throws IOException {
-		testContextSetup.testBase.WebDriverManager().get("https://lms.app.com/Manage program");
-
+	public void program_details_popup_window_should_be_closed_without_saving_in_program() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 	@When("Enter all the required fields with valid values and click Save button in program")
-	public void enter_all_the_required_fields_with_valid_values_and_click_save_button_in_program(String Sheetname,int RowNumber) throws InvalidFormatException, IOException {
-		List<Map<String,String>> data=reader.getData("./src/test/resources/ProjectExcelSheets/tryEditor.xlsx" , Sheetname);
-		String cellvalue1=data.get(RowNumber).get("ProgramName");
-		String cellvalue2=data.get(RowNumber).get(	"ProgramDesc");
-		programPage.entertextprogramname(cellvalue1);
-		programPage.entertextprogramdescription(cellvalue2);
-		programPage.clickradiobtnprogramstatusactive();
-		
-		programPage.clicksavebtn();
+	public void enter_all_the_required_fields_with_valid_values_and_click_save_button_in_program() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 	@Then("Admin gets a message {string} alert and able to see the new program added in the data table in program")
-	public void admin_gets_a_message_alert_and_able_to_see_the_new_program_added_in_the_data_table_in_program(String successmessage) {
-		String success=programPage.alertmsg();
-		Assert.assertEquals(success,successmessage);}
+	public void admin_gets_a_message_alert_and_able_to_see_the_new_program_added_in_the_data_table_in_program(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
 
 	@When("Admin clicks <Cancel>button in program")
 	public void admin_clicks_cancel_button_in_program() {
-		programPage.clickcancelbtn();
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 	@Then("Admin can see the Program details popup disappears without creating any program in program")
-	public void admin_can_see_the_program_details_popup_disappears_without_creating_any_program_in_program() throws IOException {
-		testContextSetup.testBase.WebDriverManager().get("https://lms.app.com/Manage program");
-
+	public void admin_can_see_the_program_details_popup_disappears_without_creating_any_program_in_program() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 
 //EDITPROGRAM-SD
 	@When("Admin clicks <Edit> button on the data table for any row in program")
 	public void admin_clicks_edit_button_on_the_data_table_for_any_row_in_program() {
-		programPage.clickeditprogram();
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 	@Then("Admin should see a popup open for Program details to edit in program")
 	public void admin_should_see_a_popup_open_for_program_details_to_edit_in_program() {
-	    programPage.clickeditprogram();
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 	@Given("Admin is on Program Details Popup window to Edit in program")
 	public void admin_is_on_program_details_popup_window_to_edit_in_program() {
-		programPage.clickeditprogram(); 
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
-	@When("Admin edits the {string} and clicks save button in program")
-	public void admin_edits_the_name_column_and_clicks_save_button_in_program(String Sheetname,int RowNumber) throws InvalidFormatException, IOException {
-		programPage.cleartextfornameedit();
-		List<Map<String,String>> data=reader.getData("./src/test/resources/ProjectExcelSheets/tryEditor.xlsx" , Sheetname);
-		String cellvalue1=data.get(RowNumber).get("ProgramName");
-		programPage.entertextprogramname(cellvalue1);
-		
-		programPage.clicksavebtn();  
+	@When("Admin edits the Name column and clicks save button in program")
+	public void admin_edits_the_name_column_and_clicks_save_button_in_program() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 	@Then("Admin gets a message {string} alert and able to see the updated name in the table for the particular program in program")
-	public void admin_gets_a_message_alert_and_able_to_see_the_updated_name_in_the_table_for_the_particular_program_in_program(String updated) {
-		String updatesuccess=programPage.alertmsg();
-		Assert.assertEquals(updatesuccess, updated);
+	public void admin_gets_a_message_alert_and_able_to_see_the_updated_name_in_the_table_for_the_particular_program_in_program(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
-	@When("Admin edits the {string} and then clicks save button in program")
-	public void admin_edits_the_description_column_and_clicks_save_button_in_program(String Sheetname,int RowNumber) throws InvalidFormatException, IOException {
-		programPage.cleartextfordescriptionedit();
-		List<Map<String,String>> data=reader.getData("./src/test/resources/ProjectExcelSheets/tryEditor.xlsx" , Sheetname);
-		String cellvalue1=data.get(RowNumber).get("ProgramDesc");
-		programPage.entertextprogramdescription(cellvalue1);
-		
-		programPage.clicksavebtn();  
+	@When("Admin edits the Description column and clicks save button in program")
+	public void admin_edits_the_description_column_and_clicks_save_button_in_program() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 	@Then("Admin gets a message {string} alert and able to see the updated description in the table for the particular program in program")
-	public void admin_gets_a_message_alert_and_able_to_see_the_updated_description_in_the_table_for_the_particular_program_in_program(String updated) {
-		String updatesuccess=programPage.alertmsg();
-		Assert.assertEquals(updatesuccess, updated);
+	public void admin_gets_a_message_alert_and_able_to_see_the_updated_description_in_the_table_for_the_particular_program_in_program(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 	@When("Admin changes the Status and clicks save button in program")
 	public void admin_changes_the_status_and_clicks_save_button_in_program() {
-		programPage.clickradiobtnprogramstatusinactive();
-		programPage.clicksavebtn();  
-
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 	@Then("Admin gets a message {string} alert and able to see the updated status in the table for the particular program in program")
-	public void admin_gets_a_message_alert_and_able_to_see_the_updated_status_in_the_table_for_the_particular_program_in_program(String updated) {
-		String updatesuccess=programPage.alertmsg();
-		Assert.assertEquals(updatesuccess, updated);
+	public void admin_gets_a_message_alert_and_able_to_see_the_updated_status_in_the_table_for_the_particular_program_in_program(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 	@When("Admin clicks <Cancel>button on edit popup in program")
 	public void admin_clicks_cancel_button_on_edit_popup_in_program() {
-		programPage.clickcancelbtn();	}
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
 
 	@Then("Admin can see the Program details popup disappears and can see nothing changed for particular program in program")
-	public void admin_can_see_the_program_details_popup_disappears_and_can_see_nothing_changed_for_particular_program_in_program() throws IOException {
-		testContextSetup.testBase.WebDriverManager().get("https://lms.app.com/Manage program");
-
+	public void admin_can_see_the_program_details_popup_disappears_and_can_see_nothing_changed_for_particular_program_in_program() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 	@When("Admin clicks <Save>button on edit popup in program")
 	public void admin_clicks_save_button_on_edit_popup_in_program() {
-		programPage.clicksavebtn();	}
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
 
 	@Then("Admin gets a message {string} alert and able to see the updated details in the table for the particular program in program")
-	public void admin_gets_a_message_alert_and_able_to_see_the_updated_details_in_the_table_for_the_particular_program_in_program(String success) {
-		String updatesuccess=programPage.alertmsg();
-		Assert.assertEquals(updatesuccess, success);
-}
+	public void admin_gets_a_message_alert_and_able_to_see_the_updated_details_in_the_table_for_the_particular_program_in_program(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
 
 //DELETEPROGRAM-SD
 	@When("Admin clicks <Delete> button on the data table for any row in program")
 	public void admin_clicks_delete_button_on_the_data_table_for_any_row_in_program() {
-	    programPage.clickdeleteprogram();
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
-	@Then("")
+	@Then("Admin should see a alert open with heading {string} along with  <YES> and <NO> button for deletion in program")
 	public void admin_should_see_a_alert_open_with_heading_along_with_yes_and_no_button_for_deletion_in_program(String string) {
-		programPage.deletepopwindowdetails();	}
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
 
 	@Then("Admin should see a message {string} in program")
 	public void admin_should_see_a_message_in_program(String string) {
-	    
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
 	@Given("Admin is on Confirm Deletion alert in program")
