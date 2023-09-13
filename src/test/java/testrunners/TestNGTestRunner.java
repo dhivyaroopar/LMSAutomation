@@ -7,8 +7,9 @@ import io.cucumber.testng.CucumberOptions;
 
 //dryrun will see mapping between feature file and step definition
 //html, xml, json, junit, extent
-@CucumberOptions(features="src/test/java/features", glue="stepdefinitions",
-monochrome=true, 
+@CucumberOptions(features={"src/test/resources/features"}, glue={"stepdefinitions, apphooks"},
+monochrome=true,
+dryRun=true,
 plugin= {"html:target/cucumber.html","json:target/cucumber.json","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 		"rerun:target/failed_scenarios.txt"})
 public class TestNGTestRunner extends AbstractTestNGCucumberTests{

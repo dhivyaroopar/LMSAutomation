@@ -9,4 +9,14 @@ public class AttendancePage {
 		this.driver=driver;
 	}
 
+	public static void click() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static void click() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

@@ -9,7 +9,6 @@ import org.openqa.selenium.WebDriver;
 
 
 
-
 //reusable methods
 public class GenericUtils {
 	public WebDriver driver;
@@ -26,8 +25,6 @@ public class GenericUtils {
 		String childWindow = i1.next();
 		driver.switchTo().window(childWindow);
 	}
-	
-
 	public void navigateBack() {
 		 
 		  driver.navigate().back();
@@ -40,6 +37,4 @@ public class GenericUtils {
 		 		  	  
 		  }
 
-	
-	
-}
+	}

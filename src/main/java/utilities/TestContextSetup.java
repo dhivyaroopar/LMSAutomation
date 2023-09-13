@@ -1,14 +1,14 @@
 package utilities;
 
 import java.io.IOException;
-
 import org.openqa.selenium.WebDriver;
-
 import pages.PageObjectManager;
+
 
 public class TestContextSetup {
 	// sharing the states among multiple step definitions
 	// having this class to avoid creating objects in step defs using constructor
+	
 	public WebDriver driver;
 	public PageObjectManager pageObjectManager;
 	public TestBase testBase;
@@ -20,6 +20,20 @@ public class TestContextSetup {
 		genericUtils = new GenericUtils(testBase.WebDriverManager());
 		
 	}
-	
 
+	public static String getApplicationUrl() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Object getPassword() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Object getUserName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
 }

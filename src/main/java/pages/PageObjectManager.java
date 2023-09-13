@@ -2,6 +2,8 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 
+import stepdefinitions.StudentPageStepDefination;
+
 //role :  create objects for each page object and assign driver
 public class PageObjectManager {
 	public MainLoginPage mainLoginPage;
@@ -29,7 +31,7 @@ public class PageObjectManager {
 		return dashboardPage;
 	}
 	public StudentPage getStudentPage() {
-		studentPage= new StudentPage(driver);
+		studentPage= new StudentPage();
 		return studentPage;
 	}
 	public ProgramPage getProgramPage() {
@@ -55,6 +57,11 @@ public class PageObjectManager {
 	public AttendancePage getAttendancePage() {
 		attendancePage= new AttendancePage(driver);
 		return attendancePage;
+	}
+
+	public StudentPageStepDefination getStudentPageStepDefination() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
