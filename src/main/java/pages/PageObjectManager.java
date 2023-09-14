@@ -9,7 +9,7 @@ public class PageObjectManager {
 	public ForgotUsernamePasswordPage forgotUsernamePasswordPage;
 	public ResetPasswordPage resetPasswordPage;
 	public DashboardPage dashboardPage;
-	public StudentPage studentPage;
+	//public StudentPage studentPage;
 	public ProgramPage programPage;
 	public BatchPage batchPage;
 	public ClassPage classPage;
@@ -48,10 +48,10 @@ public class PageObjectManager {
 		resetPasswordPage= new ResetPasswordPage(driver);
 		return resetPasswordPage;
 	}
-	public StudentPage getStudentPage() {
-		studentPage= new StudentPage(driver);
-		return studentPage;
-	}
+//	public StudentPage getStudentPage() {
+//		studentPage= new StudentPage(driver);
+//		return studentPage;
+//	}
 	public ProgramPage getProgramPage() {
 		programPage= new ProgramPage(driver);
 		return programPage;

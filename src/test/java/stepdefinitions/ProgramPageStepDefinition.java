@@ -36,8 +36,8 @@ public class ProgramPageStepDefinition {
 public void logged_on_the_lms_portal_as_admin() {
 	 LoggerLoad.info("Logged on the LMS portal as Admin");
     //temp
-	 testContextSetup.testBase.WebDriverManager().get("https://lms.app.com/LMSlogin");
-	 programPage.clicklogin();//from login stepdef
+	 //testContextSetup.testBase.WebDriverManager().get("https://lms.app.com/LMSlogin");
+	 //programPage.clicklogin();//from login stepdef
 }
 
 	@Given("Admin is on dashboard page after Login in program")
