@@ -25,11 +25,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.it.Data;
 import utilities.LoggerLoad;
+import utilities.TestContextSetup;
 
 //import dspageobjectmodel.Homepage;
 
 public class ClassPage {
 	public WebDriver driver;
+	TestContextSetup testContextSetup;
 	String headername;
 	int Classcount;
 
@@ -282,12 +284,14 @@ public class ClassPage {
 		}
 	}
 
-	public void ClassTopic() {
+	public String ClassTopic() {
 		List<WebElement> Searchforclasstopic = driver.findElements(By.tagName("a"));
 		System.out.println(Searchforclasstopic.size());
 		for (int i = 0; i < Searchforclasstopic.size(); i++) {
-			String Listclasstopic = Searchforclasstopic.get(i).getText();
+			testContextSetup.Listclasstopic = Searchforclasstopic.get(i).getText();
+			
 		}
+		return testContextSetup.Listclasstopic;
 	}
 
 	public void ClassTopicdisplay() {

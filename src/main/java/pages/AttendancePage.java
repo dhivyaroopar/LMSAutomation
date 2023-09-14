@@ -796,14 +796,16 @@ public class AttendancePage {
     }
     	
     	
-    	public void  verifydelete()
+    	public boolean  verifydelete()
     	{
        boolean isDeleted = deletedAttendanceRow.isDisplayed();
          if (!isDeleted) {
         	 System.out.println("Item deletion verification sucess");
+        	 return true;
         
          } else {
         	 System.out.println("Item deletion verification failed.");
+        	 return false;
          }
 
     }

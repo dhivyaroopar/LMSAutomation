@@ -21,7 +21,7 @@ Then Admin should see the pagination controls under the data table
 Scenario: 
 Given Admin is on dashboard page after Login
 When Admin clicks "User" from navigation bar
-Then Admin Should see the data table with headers Id, Name, location, Phone Number, Edit/Delete
+Then Admin Should see the data table with headers
 
 
 Scenario: 

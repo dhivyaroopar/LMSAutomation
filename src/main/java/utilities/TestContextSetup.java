@@ -16,8 +16,8 @@ public class TestContextSetup {
 	public GenericUtils genericUtils;
 	public LoggerLoad loggerLoad;
 	public HttpURLConnection httpURLConnection;
-	public String className;
-	public String programName;
+	public String Listclasstopic;
+	public String listofprogramname;
 
 	public TestContextSetup() throws IOException{
 		testBase = new TestBase();

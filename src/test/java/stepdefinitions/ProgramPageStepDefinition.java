@@ -25,7 +25,7 @@ public class ProgramPageStepDefinition {
 	ExcelReader reader ;
 	GenericUtils genericUtils;
 
-	
+	String xlPath=System.getProperty(("user.dir")+"//LMSAutomation//exceldata//TestData.xlsx");
 	
 		public ProgramPageStepDefinition(TestContextSetup testContextSetup) {
 		this.testContextSetup=testContextSetup;
@@ -247,7 +247,7 @@ public void logged_on_the_lms_portal_as_admin() {
 
 	@When("Admin enters only {string} in text box and clicks Save button in program")
 	public void admin_enters_only_program_name_in_text_box_and_clicks_save_button_in_program(String Sheetname,int RowNumber) throws InvalidFormatException, IOException {
-		List<Map<String,String>> data=reader.getData("./src/test/resources/ProjectExcelSheets/tryEditor.xlsx" , Sheetname);
+		List<Map<String,String>> data=reader.getData(xlPath , Sheetname);
 		String cellvalue1=data.get(RowNumber).get("ProgramName");
 		programPage.entertextprogramname(cellvalue1);
 		
@@ -263,7 +263,7 @@ public void logged_on_the_lms_portal_as_admin() {
 
 	@When("Admin enters only {string} in text box and clicks Save button in program")
 	public void admin_enters_only_program_description_in_text_box_and_clicks_save_button_in_program(String Sheetname,int RowNumber) throws InvalidFormatException, IOException {
-		List<Map<String,String>> data=reader.getData("./src/test/resources/ProjectExcelSheets/tryEditor.xlsx" , Sheetname);
+		List<Map<String,String>> data=reader.getData(xlPath , Sheetname);
 		String cellvalue1=data.get(RowNumber).get("ProgramDesc");
 		programPage.entertextprogramdescription(cellvalue1);
 		
@@ -278,7 +278,7 @@ public void logged_on_the_lms_portal_as_admin() {
 
 	@When("Admin enters only numbers or special char {string} and {string} in name and desc column in program")
 	public void admin_enters_only_numbers_or_special_char_in_name_and_desc_column_in_program(String Sheetname,int RowNumber) throws InvalidFormatException, IOException {
-		List<Map<String,String>> data=reader.getData("./src/test/resources/ProjectExcelSheets/tryEditor.xlsx" ,Sheetname );
+		List<Map<String,String>> data=reader.getData(xlPath ,Sheetname );
 		String cellvalue1=data.get(RowNumber).get("ProgramName");
 		String cellvalue2=data.get(RowNumber).get("ProgramDesc");
 		programPage.entertextprogramname(cellvalue1);
@@ -309,7 +309,7 @@ public void logged_on_the_lms_portal_as_admin() {
 	public void enter_all_the_required_fields_with_valid_values_and_click_save_button_in_program(String Sheetname,int RowNumber) throws InvalidFormatException, IOException {
 		LoggerLoad.info("Enter all the required fields with valid values and click Save button in progra");
 
-		List<Map<String,String>> data=reader.getData("./src/test/resources/ProjectExcelSheets/tryEditor.xlsx" , Sheetname);
+		List<Map<String,String>> data=reader.getData(xlPath , Sheetname);
 		String cellvalue1=data.get(RowNumber).get("ProgramName");
 		String cellvalue2=data.get(RowNumber).get("ProgramDesc");
 		programPage.entertextprogramname(cellvalue1);
@@ -367,7 +367,7 @@ public void logged_on_the_lms_portal_as_admin() {
 	@When("Admin edits the {string} and clicks save button in program")
 	public void admin_edits_the_name_column_and_clicks_save_button_in_program(String Sheetname,int RowNumber) throws InvalidFormatException, IOException {
 		programPage.cleartextfornameedit();
-		List<Map<String,String>> data=reader.getData("./src/test/resources/ProjectExcelSheets/tryEditor.xlsx" , Sheetname);
+		List<Map<String,String>> data=reader.getData(xlPath , Sheetname);
 		String cellvalue1=data.get(RowNumber).get("ProgramName");
 		programPage.entertextprogramname(cellvalue1);
 		
@@ -384,7 +384,7 @@ public void logged_on_the_lms_portal_as_admin() {
 	@When("Admin edits the {string} and then clicks save button in program")
 	public void admin_edits_the_description_column_and_clicks_save_button_in_program(String Sheetname,int RowNumber) throws InvalidFormatException, IOException {
 		programPage.cleartextfordescriptionedit();
-		List<Map<String,String>> data=reader.getData("./src/test/resources/ProjectExcelSheets/tryEditor.xlsx" , Sheetname);
+		List<Map<String,String>> data=reader.getData(xlPath , Sheetname);
 		String cellvalue1=data.get(RowNumber).get("ProgramDesc");
 		programPage.entertextprogramdescription(cellvalue1);
 		
@@ -419,7 +419,7 @@ public void logged_on_the_lms_portal_as_admin() {
 	@When("Admin enters only numbers or special char {string} and {string} in name and desc column in programedit")
 public void Admin_enters_only_numbers_or_special_char(String Sheetname,int RowNumber) throws InvalidFormatException, IOException {
 		programPage.cleartextfordescriptionedit();
-		List<Map<String,String>> data=reader.getData("./src/test/resources/ProjectExcelSheets/tryEditor.xlsx" , Sheetname);
+		List<Map<String,String>> data=reader.getData(xlPath , Sheetname);
 		String cellvalue1=data.get(RowNumber).get("ProgramDesc");
 		programPage.entertextprogramdescription(cellvalue1);
 		

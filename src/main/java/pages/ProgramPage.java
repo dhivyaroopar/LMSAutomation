@@ -1,6 +1,7 @@
 package pages;
 
 import java.util.ArrayList;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -12,12 +13,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import utilities.TestContextSetup;
 
 public class ProgramPage {
-	
+	TestContextSetup testContextSetup;
 	public WebDriver driver;
 	String alert;
 	String editprogramname;
@@ -344,6 +345,15 @@ public boolean validate_edit_Programdesccription(String ProgramDescription) {
 		}
 	}
 	return result;
+}
+
+public String Programnameforstoring() {
+	List<WebElement> storingprogramname = driver.findElements(By.tagName("a"));
+	System.out.println(storingprogramname.size());
+	for (int i = 0; i < storingprogramname.size(); i++) {
+		testContextSetup.listofprogramname = storingprogramname.get(i).getText();
+	}
+	return testContextSetup.listofprogramname;
 }
 
 public boolean validate_editProgram_status() {

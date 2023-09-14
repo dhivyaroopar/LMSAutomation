@@ -26,7 +26,7 @@ public class BatchPageStepDefinition {
 	TestBase Tsb;
 	ProgramPage programPage;
 	ExcelReader reader;
-	
+	String xlPath=System.getProperty(("user.dir")+"//LMSAutomation//exceldata//TestData.xlsx");
 
 	public BatchPageStepDefinition(TestContextSetup testContextSetup) {
 		this.testContextSetup=testContextSetup;
@@ -149,7 +149,7 @@ batchPage.batchheadercolumn(batch);
 	public void fill_in_all_the_fields_except_description_with_valid_values_in_batch(String Sheetname,int RowNumber) throws InvalidFormatException, IOException {
 		genericUtils.SwitchWindowToChild();
 
-		List<Map<String,String>> data=reader.getData("./src/test/resources/ProjectExcelSheets/tryEditor.xlsx" , Sheetname);
+		List<Map<String,String>> data=reader.getData(xlPath , Sheetname);
 		String cellvalue1=data.get(RowNumber).get("batchname");
 		String cellvalue2=data.get(RowNumber).get("noofclasses");
 		batchPage.entertextbatchname(cellvalue1);
@@ -169,7 +169,7 @@ batchPage.batchheadercolumn(batch);
 	public void fill_in_all_the_fields_with_valid_values_and_click_save_in_batch(String Sheetname,int RowNumber,String slectdropdown) throws InvalidFormatException, IOException {
 		genericUtils.SwitchWindowToChild();
 
-		List<Map<String,String>> data=reader.getData("./src/test/resources/ProjectExcelSheets/tryEditor.xlsx" , Sheetname);
+		List<Map<String,String>> data=reader.getData(xlPath , Sheetname);
 		String cellvalue1=data.get(RowNumber).get("batchname");
 		String cellvalue2=data.get(RowNumber).get("noofclasses");
 		String cellvalue3=data.get(RowNumber).get("batchdescription");
@@ -188,7 +188,7 @@ batchPage.batchheadercolumn(batch);
 	public void any_of_the_fields_have_invalid_values_in_batch(String Sheetname,int RowNumber) throws InvalidFormatException, IOException {
 		genericUtils.SwitchWindowToChild();
 
-		List<Map<String,String>> data=reader.getData("./src/test/resources/ProjectExcelSheets/tryEditor.xlsx" , Sheetname);
+		List<Map<String,String>> data=reader.getData(xlPath , Sheetname);
 		String cellvalue1=data.get(RowNumber).get("batchname");
 		String cellvalue2=data.get(RowNumber).get("noofclasses");
 		String cellvalue3=data.get(RowNumber).get("batchdescription");
@@ -210,7 +210,7 @@ batchPage.batchheadercolumn(batch);
 	public void any_of_the_mandatory_fields_are_blank_in_batch(String Sheetname,int RowNumber) throws InvalidFormatException, IOException {
 		genericUtils.SwitchWindowToChild();
 
-		List<Map<String,String>> data=reader.getData("./src/test/resources/ProjectExcelSheets/tryEditor.xlsx" , Sheetname);
+		List<Map<String,String>> data=reader.getData(xlPath , Sheetname);
 		String cellvalue1=data.get(RowNumber).get("batchname");
 		String cellvalue2=data.get(RowNumber).get("noofclasses");
 		String cellvalue3=data.get(RowNumber).get("batchdescription");
@@ -256,7 +256,7 @@ batchPage.batchheadercolumn(batch);
 		programPage.cleartextfornameedit();
 		programPage.cleartextfordescriptionedit();
 		batchPage.cleartextfornoofclassesedit();
-		List<Map<String,String>> data=reader.getData("./src/test/resources/ProjectExcelSheets/tryEditor.xlsx" , Sheetname);
+		List<Map<String,String>> data=reader.getData(xlPath , Sheetname);
 		String cellvalue1=data.get(RowNumber).get("batchname");
 		String cellvalue2=data.get(RowNumber).get("noofclasses");
 		String cellvalue3=data.get(RowNumber).get("batchdescription");
@@ -284,7 +284,7 @@ batchPage.batchheadercolumn(batch);
 		programPage.cleartextfornameedit();
 		programPage.cleartextfordescriptionedit();
 		batchPage.cleartextfornoofclassesedit();
-		List<Map<String,String>> data=reader.getData("./src/test/resources/ProjectExcelSheets/tryEditor.xlsx" , Sheetname);
+		List<Map<String,String>> data=reader.getData(xlPath , Sheetname);
 		String cellvalue1=data.get(RowNumber).get("batchname");
 		String cellvalue2=data.get(RowNumber).get("noofclasses");
 		String cellvalue3=data.get(RowNumber).get("batchdescription");
@@ -301,7 +301,7 @@ batchPage.batchheadercolumn(batch);
 		programPage.cleartextfornameedit();
 		programPage.cleartextfordescriptionedit();
 		batchPage.cleartextfornoofclassesedit();
-		List<Map<String,String>> data=reader.getData("./src/test/resources/ProjectExcelSheets/tryEditor.xlsx" , Sheetname);
+		List<Map<String,String>> data=reader.getData(xlPath , Sheetname);
 		String cellvalue1=data.get(RowNumber).get("batchname");
 		String cellvalue2=data.get(RowNumber).get("noofclasses");
 		String cellvalue3=data.get(RowNumber).get("batchdescription");
@@ -316,7 +316,7 @@ batchPage.batchheadercolumn(batch);
 	public void erase_data_from_description_field_in_batch(String Sheetname,int RowNumber,String slectdropdown) throws InvalidFormatException, IOException {
 		programPage.cleartextfornameedit();
 		batchPage.cleartextfornoofclassesedit();
-		List<Map<String,String>> data=reader.getData("./src/test/resources/ProjectExcelSheets/tryEditor.xlsx" , Sheetname);
+		List<Map<String,String>> data=reader.getData(xlPath , Sheetname);
 		String cellvalue1=data.get(RowNumber).get("batchname");
 		String cellvalue2=data.get(RowNumber).get("noofclasses");
 		batchPage.entertextbatchname(cellvalue1);

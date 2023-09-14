@@ -7,6 +7,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
 import pages.AssignmentPage;
+import pages.LoginPage;
 import utilities.LoggerLoad;
 import utilities.TestContextSetup;
 
@@ -18,6 +19,7 @@ public class AssignmentPageStepDefinition {
 	public WebDriver driver;
 	TestContextSetup testContextSetup;
     AssignmentPage assignmentPage;
+    LoginPage loginPage;
 	public AssignmentPageStepDefinition(TestContextSetup testContextSetup) {
 		this.testContextSetup=testContextSetup;
 		this.assignmentPage=testContextSetup.pageObjectManager.getAssignmentPage();
@@ -26,7 +28,8 @@ public class AssignmentPageStepDefinition {
 	@Given("Logged on the LMS portal as Admin")
 	public void logged_on_the_lms_portal_as_admin() {
 		
-	   assignmentPage.login();
+	   loginPage.enterCredentials("Rashmi", "Rashmi!1");
+	   loginPage.clickOnlogInBtn();
 	}
 
 	@Given("Admin is on dashboard page after Login")

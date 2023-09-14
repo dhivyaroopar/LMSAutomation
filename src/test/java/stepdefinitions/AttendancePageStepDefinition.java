@@ -12,6 +12,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.AttendancePage;
 import pages.ClassPage;
+import pages.LoginPage;
 import utilities.LoggerLoad;
 import utilities.TestContextSetup;
 
@@ -19,6 +20,7 @@ public class AttendancePageStepDefinition {
 	AttendancePage attendancePage;
 	public WebDriver driver;
 	TestContextSetup testContextSetup;
+	LoginPage loginPage;
 	
 	public AttendancePageStepDefinition(TestContextSetup testContextSetup) {
 		this.testContextSetup=testContextSetup;
@@ -28,6 +30,13 @@ public class AttendancePageStepDefinition {
 	
 	//1.Manage Attendance 
 	
+
+	@Given("Logged on the LMS portal as Admin")
+	public void logged_on_the_lms_portal_as_admin() {
+		
+	   loginPage.enterCredentials("Rashmi", "Rashmi!1");
+	   loginPage.clickOnlogInBtn();
+	}
 	@Given("Admin is on dashboard page after Login in attendance")
 	public void admin_is_on_dashboard_page_after_login_in_attendance() {
 		attendancePage.verifyDashboard();
@@ -257,7 +266,7 @@ public class AttendancePageStepDefinition {
 	@Then("Program Name in the drop down should match with program name in manage program page table in attendance details popup")
 	public void program_name_in_the_drop_down_should_match_with_program_name_in_manage_program_page_table_in_attendance_details_popup() {
 		String dropdownClassName=attendancePage.getDropdownProgramName();
-		Assert.assertEquals(dropdownClassName, testContextSetup.programName);
+		Assert.assertEquals(dropdownClassName, testContextSetup.listofprogramname);
 	}
 	
 	@When("Admin clicks date picker button in attendance details popup")
@@ -289,7 +298,7 @@ public class AttendancePageStepDefinition {
 	@Then("Class Name in the drop down should match with class name in manage class page table in attendance details popup")
 	public void class_name_in_the_drop_down_should_match_with_class_name_in_manage_class_page_table_in_attendance_details_popup() {
 		String dropdownClassName=attendancePage.getDropdownClassName();
-		Assert.assertEquals(dropdownClassName, testContextSetup.className);
+		Assert.assertEquals(dropdownClassName, testContextSetup.Listclasstopic);
 	}
 	
 	@When("Admin clicks right arrow in the date picker near month in attendance details popup")

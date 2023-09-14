@@ -1,7 +1,7 @@
 Feature: Manage Attendance Page verification
 
 Background: Logged on the LMS portal as Admin
-Given Admin is on dashboard page after Login in attendance
+Given Logged on the LMS portal as Admin
 #1
 Scenario: Validate the header of the page
 When Admin clicks "Attendance" on the navigation bar in attendance
