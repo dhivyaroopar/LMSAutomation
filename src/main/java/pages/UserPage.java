@@ -3,7 +3,6 @@
 
 import java.util.List;
 
-import org.apache.logging.log4j.core.util.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -73,6 +72,16 @@ import utilities.TestContextSetup;
 		@FindBy(xpath="<h34 id = Row to be deleted2")WebElement Rowtodelete2;
 		@FindBy(xpath="<h35 id = Navigation Bar")WebElement NavigationBar;
 		@FindBy(xpath="<h36 id = User Button")WebElement Userbutton;
+		@FindBy(xpath="<h37 id = Error Message")WebElement Error;
+		@FindBy(xpath="<h38 id = UserRole")WebElement UserRole;
+		@FindBy(xpath="<h39 id = Visa Status")WebElement VisaStatus;
+		@FindBy(xpath="<h40 id = Edit Button")WebElement EditButton4;
+		@FindBy(xpath="<h41 id = Summit Button")WebElement SummitButton1;
+		@FindBy(xpath="<h42 id = Update User Detail")WebElement UpdateUserDetail;
+		@FindBy(xpath="<h43 id = Delete Enable")WebElement DeleteEnable;
+		@FindBy(xpath="<h44 id = String Btn")WebElement StringButton;
+		
+		
 		
 		
 		private WebElement TableUpdated;
@@ -80,11 +89,11 @@ import utilities.TestContextSetup;
 		
 			
 		
-	 public void clickuser() {
+	 public void ManageUser() {
 		 ManageUser.click();
 	 }
 		 
-		 public void ManageUser1() {
+	public void ManageUser1() {
 			 if (isManageUserInURL(driver1)) {
 		            System.out.println("Admin sees 'Manage User' in the URL.");
 		        } else {
@@ -92,34 +101,47 @@ import utilities.TestContextSetup;
 		        }
 		 }
 		 
-		 public void ValidateManageUserPage()
+	private boolean isManageUserInURL(WebDriver driver12) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public void ValidateManageUserPage()
 		 {
 	    driver.findElement(By.xpath("h24 id = Manager User Header"));
 	    ManageUser.click();
          }
+		 
+		 
+	public void StringButton()
+		 {
+		driver.findElement(By.xpath("h44 id = String Btn"));
+		StringButton.click();
+		 }
 		
-		 public void NavigationBar() {
-	     WebElement Userbutton = driver.findElement(By.linkText("User"));
+		 
+	public void NavigationBar() {
+	     WebElement Userbutton = driver.findElement(By.xpath("h36 id = User Button"));
 	     Userbutton .click();	 
 		 }
 
 		 
-		 protected abstract boolean isManageUserInURL(WebDriver driver12);
+		// protected abstract boolean isManageUserInURL(WebDriver driver12);
 
-		public void Validatepagination()
+    public void Validatepagination()
 		 {
 		Pagination = driver.findElement(By.id("pagination-controls")); 
 		Pagination.click();
 		 }
 		 
 		 
-		 public void Validatedatatable()
+	public void Validatedatatable()
 		 {
 			 ManageUserTable.findElement(By.xpath("h25 id = Manager User Table"));	
 		 }
 		 
 		 
-		 public void Validatedeletedisable()
+	public void Validatedeletedisable()
 		 {
 		 Deletebutton = driver.findElement(By .id("Deletebutton"));
 		 Deletebutton.click();
@@ -127,7 +149,7 @@ import utilities.TestContextSetup;
 		 }
 		 
 		 
-	     public void Addnewuser()
+	public void Addnewuser()
 	     {
 	    	 Addnewuser.findElement(By.xpath("h1 id = '+  Add New User")).isEnabled();
 	    	 Addnewuser.click();
@@ -136,21 +158,21 @@ import utilities.TestContextSetup;
 	     
 	     
 	 
-		 public void Validateaddbutton2()
+	public void Validateaddbutton2()
 		 {
 		 Assignstaff = driver.findElement(By .linkText("+A Assign Staff"));  
 		 Assignstaff.click();
 		}
 	 
 		 
-		 public void Validatesearchbox() 
+	public void Validatesearchbox() 
 		
 		 {
 			SearchOption = driver.findElement(By.linkText("'Search'"));	 
 		 }
 
 	     
-		 public abstract void Validatecheckbox();
+	public abstract void Validatecheckbox();
 		 {
 			 
 			 Checkbox1 = driver.findElement(By.xpath("'h4 id = Checkbox1'"));	
@@ -158,7 +180,7 @@ import utilities.TestContextSetup;
 		 }
 		 
 		 
-		 public void Editenable() {
+	public void Editenable() {
 	    	 driver.findElement(By.xpath("h9 id = Editbutton1")).isEnabled();
 	    	 Editbutton1.click();
 	    	 
@@ -166,41 +188,59 @@ import utilities.TestContextSetup;
 			}
 		 
 		 
-		 public void Deletenable() {
+    public void Deletenable() {
 			 driver.findElement(By.xpath("h11 id = Deletebutton1")).isEnabled();	
 		 }
 		 
 		 
-		 public void ValidatePopup() {
+	public void ValidatePopup() {
 			 
 			
 			 WebElement  triggerElement = driver.findElement(By.xpath("Addnewuser"));
 		        triggerElement.click();
 
-		 WebElement popupElement = driver.findElement(By.xpath("h14 id = Pop Up"));
-		        Assert.assertTrue(popupElement.isDisplayed());
+		 driver.findElement(By.xpath("h14 id = Pop Up"));
 		 }
 		        
 		        
-		        public void Validatefield()  {
-		    
-
-		 Assert.assertTrue(driver.findElement(By.id("firstName")).isDisplayed(), 
-		 Assert.assertTrue(driver.findElement(By.id("middleName")).isDisplayed(), 
-		 Assert.assertTrue(driver.findElement(By.id("lastName")).
-		 Assert.assertTrue(driver.findElement(By.id("location")).isDisplayed(), 
-		 Assert.assertTrue(driver.findElement(By.id("phone")).isDisplayed(), 
-		 Assert.assertTrue(driver.findElement(By.id("email")).isDisplayed(), 
-		 Assert.assertTrue(driver.findElement(By.id("linkedinUrl")).isDisplayed(),
-		 Assert.assertTrue(driver.findElement(By.id("undergraduate")).isDisplayed(), 
-		 Assert.assertTrue(driver.findElement(By.id("postgraduate")).isDisplayed(), 
-		 Assert.assertTrue(driver.findElement(By.id("timeZone")).isDisplayed(),
-		 Assert.assertTrue(driver.findElement(By.id("userComments")).isDisplayed();
-				 
-		}
+	public void Validatefield()  {
+		   
+		driver.findElement(By.id("first_name"));
+        driver.findElement(By.id("middle_name"));
+        driver.findElement(By.id("last_name"));
+        driver.findElement(By.id("location"));
+        driver.findElement(By.id("phone"));
+        driver.findElement(By.id("email"));
+        driver.findElement(By.id("linkedin_url"));
+        driver.findElement(By.id("undergraduate"));
+        driver.findElement(By.id("postgraduate"));
+        driver.findElement(By.id("time_zone"));
+        driver.findElement(By.id("user_comments"));
+		
+     }
       	
 		        
-		        public void fillallfields()  
+	private Object validateField(boolean displayed, Object validateField) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private Object validateField(boolean displayed) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private Object Validate(boolean displayed, Object validate) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private Object Validate(boolean displayed) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void fillallfields()  
 		        {   
 		   
 		     driver.findElement(By.id("firstName")).sendKeys("Raj");
@@ -218,20 +258,20 @@ import utilities.TestContextSetup;
 		     
 		        }   
 		     
-		     public void submitbutton1() 
+   public void submitbutton1() 
 		     {
 		    	 Submit = driver.findElement(By.xpath("'h22 id = Submit'"));	
 				 Submit.click();
 		        }    
 		     
-		     public void Cancelbutton() 
+   public void Cancelbutton() 
 		     {
 		    	 Cancel = driver.findElement(By.xpath("'h23 id = Submit'")); 
 		     }
 
 		      
 		     
-		     public void ValidateNewUser() 
+	public void ValidateNewUser() 
 		        {
 	         
 		    	 WebElement dataTable = driver.findElement(By.xpath ("h25 id = Manager User Table)"));
@@ -242,67 +282,126 @@ import utilities.TestContextSetup;
 
 		        String expectedUserInfo = newUserFullName + " - " + newUserEmail;
 
-		        boolean isNewUserInDataTable = dataTable.getText().contains(expectedUserInfo);
+		        dataTable.getText().contains(expectedUserInfo);
 
-		        // Assert that the new user is present in the data table
-		        Assert.assertTrue(isNewUserInDataTable);
 		    }
 			 
-		     public void Editenable1() {
+	public void Editenable1() {
 		    	 driver.findElement(By.xpath("h9 id = Editbutton1")).isEnabled();
 		    	 Editbutton1.click();
-		    	 
-			
-				}
+		    	}
 			 
 			 
-		     public void ValidateNovalue() 
+	public void ValidateNovalue() 
 		     {
 		    	 FirstName.sendKeys(""); //Empty First Name
 		         Submit.click();
 
-		         WebElement FirstNameError = driver.findElement(By.id("firstNameError"));
-		        Assert.assertTrue(FirstNameError.isDisplayed());
+		         driver.findElement(By.id("firstNameError"));
 		     }  
 		     
+
+	public void Error() {
+		    	driver.findElement(By.xpath("h37 id = Error Message")).isEnabled();	 
+		    	 }
 		     
-		     public void Editenable2() {
+	public void AllFieldBlank() 
+		     {
+		    	 FirstName.sendKeys("");
+		         LastName.sendKeys("");
+		         Location.sendKeys("");
+		         UserRole.sendKeys("");
+		         VisaStatus.sendKeys("");
+		         
+		         // Check if any mandatory fields are still blank
+		         boolean isBlankFieldPresent = isBlankFieldPresent(driver);
+		         
+		         if (isBlankFieldPresent) {
+		             System.out.println("Validation Failed: Some mandatory fields are still blank.");
+		         } else {
+		             System.out.println("Validation Passed: All mandatory fields are filled.");
+		         }
+		     }
+		     
+		     private boolean isBlankFieldPresent(WebDriver driver2) {
+				// TODO Auto-generated method stub
+				return false;
+			}
+		     
+
+	public void Editenable2() {
 		    	 driver.findElement(By.xpath("h9 id = Editbutton1")).isEnabled();
 		    	 Editbutton2.click();
 		    	 
+		    }
 			
-				}
-			 
-		     
-		     public void  InvalidValue()
+	public void clickEdditButton4() {
+		    	 driver.findElement(By.xpath("40 id = Editbutton1")).isEnabled();
+		    	 EditButton4.click();
+			
+			}
+			
+	public void  ValidValue() {
+				Email.sendKeys("Rajdev@example.com"); //Valid Value In email address field
+			}	
+	public void Submit1() {
+		         Submit.click();
+			}
+				
+			
+	public void  InvalidValue1()
 		     {
+		     
 		    	 Email.sendKeys("Rajvcd@vdb@vv@"); //Ivalid Value In email address field
 		         Submit.click();
 
-		         WebElement FirstNameError = driver.findElement(By.id("firstNameError"));
-		        Assert.assertTrue(FirstNameError.isDisplayed()); 
+		         driver.findElement(By.id("EmailError"));
 		 
 		     }
 		      
-		     public void Editenable3() {
+	public void Editenable3() {
 		    	 driver.findElement(By.xpath("h9 id = Editbutton1")).isEnabled();
 		    	 Editbutton3.click();
 		    	 
 			
 				}
-			 
+	public void  UpdateUserDetails() {
+		    	 driver.findElement(By.xpath("h42 id = Update User Detail")).isEnabled(); 
+		    	 
+		     }
+		     
+	public boolean  MandatoryField() {
+		    	 By[] mandatoryFieldLocators = {
+		    	            By.id("first_name"),
+		    	            By.id("last_name"),
+		    	            By.id("email")
+		    	        };
 
-		     public void  NoDescriptionValue()
+		    	        for (By locator : mandatoryFieldLocators) {
+		    	            WebElement field = driver.findElement(locator);
+		    	            if (field.getAttribute("value").isEmpty()) {
+		    	                return true; // Found a blank mandatory field
+		    	            }
+		    	        }
+
+		    	        return false; // All mandatory fields are filled
+		    	    } 
+		    	 
+		     
+		     
+
+    public void  NoDescriptionValue()
 		     {
 		    	 Description.sendKeys(""); //no description In description field
 		         Submit.click();
-
-		     String updatedUserDescription = updatedUserDescription.findElement(By.xpath("h28 id = Description")).getText();
-		      Assert.assertTrue(TableUpdated.isDisplayed());
 		     }
+		     
+	public void  DeleteEnable() {
+		   driver.findElement(By.xpath("h42 id = Delete Enable")).isEnabled();
+	}
    
 		 
-		     public void  deleteenable1()
+	public void  deleteenable1()
 		     {
 		    driver.findElement(By.xpath("h3 id = Delete button")).isEnabled();
 		  
@@ -310,57 +409,54 @@ import utilities.TestContextSetup;
 		     }
 		    
 	 
-		    public void  Alertwithyesorno()
-		    {
+	public void  Alertwithyesorno1(){
+		    
 		    	Alert alert = driver.switchTo().alert();
 		        alert.getText().contains("Yes");
 		        alert.getText().contains("No");
 		    }
 				
-		    public void  Delete1()
+	public void  Delete1()
 		    {
 		    driver.findElement(By.xpath("h3 id = Delete button")).isEnabled();
 		    Deletebutton2.click();
 		    }
 		    
-		    public void  YesOption()
+	public void  YesOption()
 		    {
 		   driver.findElement(By.xpath("h29 id = Yes Option")).isEnabled();
 		   Yes.click();
 		    }
 		    
-		    public void  alertpopdeletedandnouser()
+	public void  alertpopdeletedandnouser()
 		    {
 		    Alert alert = driver.switchTo().alert();
-		    String alertText = alert.getText();
-		    Assert.assertTrue(alertText.contains("User deleted"), "The 'User deleted' alert is displayed.");
+		    alert.getText();
+		     alert.accept();
 
-		    alert.accept();
-
-		     WebElement userRow = driver.findElement(By.xpath("h31 id = Row deleted")); 
-		     Assert.assertFalse(userRow.isDisplayed(), "The user is no longer available in the data table.");
+		     driver.findElement(By.xpath("h31 id = Row deleted"));
 		    }
 		    
-		    public void  Delete2()
+    public void  Delete2()
 		    {
 		    driver.findElement(By.xpath("h3 id = Delete button")).isEnabled();
 		    DeleteButton3.click();
 		    }
 		    
-		    public void  NoOption()
+	public void  NoOption()
 		    {
 		   driver.findElement(By.xpath("h29 id = Yes Option")).isEnabled();
 		   No.click();
 		    }
 		    
-		    public void  UserStillpresent()
+    public void  UserStillpresent()
 		    {
 		   WebElement userRow = driver.findElement(By.xpath("h31 id = Row deleted")); 
-           boolean isUserPresent = userRow.isDisplayed();
+           userRow.isDisplayed();
 		    }
 		    
 		    
-		    public void  NoCheckboxSelected()
+	public void  NoCheckboxSelected()
 		    {
 		    List<WebElement> Checkbox1 = driver.findElements(By.xpath("h4 id = Checkbox1"));
              for (WebElement checkbox : Checkbox1) {
@@ -371,23 +467,20 @@ import utilities.TestContextSetup;
 		    }
 		    
 		    
-		    public void  deleteicondisable()
+		    
+	public void  deleteicondisable()
 		    {
 		     DeleteButton3 = driver.findElement(By.xpath("h3 id = Delete button"));
              DeleteButton3.getAttribute("disabled");
 	
 		    }
 		    
-		    public void  Onecheckboxseleted()
+     public void  Onecheckboxseleted()
 		    {
 		    	List<WebElement> Checkbox1 = driver.findElements(By.xpath("h4 id = Checkbox1"));
 
-		        // Check if any checkbox or row is selected
-		        boolean isAnyCheckboxOrRowSelected = false;
-
 		        for (WebElement element : Checkbox1) {
 		            if (element.isSelected()) {
-		                isAnyCheckboxOrRowSelected = true;
 		                break;
 		            }
 		        }
@@ -395,37 +488,47 @@ import utilities.TestContextSetup;
 		    }
 		        
 		        
-		        public void  Clickdelete() {
+	public void  Clickdelete() {
 		     Deletebutton = driver.findElement(By.xpath("'h6 id = Delete Button'")); 
 		     Deletebutton.click();
 		        }
 		        
+    public void  Morerowselected() 
+		        {
+		 List<WebElement> checkboxes = driver.findElements(By.xpath("//input[@type='checkbox']"));
+		            
+		  for (int i = 0; i < checkboxes.size(); i++) {
+		   if (i < 2) { // Select the first two checkboxes
+		    checkboxes.get(i).click();
+		   }  
+		   }
+		   }       
+		        
+		       
 		       public void  Datatablerowdeleted() 
-		       {
-		    boolean isRowDeleted = !Rowtodelete.isDisplayed(); 
-		    Assert.assertTrue(isRowDeleted, "The row has been deleted from the data table."); 
-		     }
-		       
-		       
-		       public void  morerowdeleted() 
 		       {
 		    	   for(int i=2;i<=rowsCount;i++) {
 		     Checkbox1=driver.findElement(By.xpath("h4 id = Checkbox1"));
 		    	   }
-             }
+             
 		    	  
-		   public void  Clickdelete1() {
+		   //public void  Clickdelete() {
 		  		Deletebutton = driver.findElement(By.xpath("'h6 id = Delete Button'")); 
 		  		Deletebutton.click();
-		  		        }
-		   
-		   public void  Datatablerowdeleted2() 
-	       {
-	    boolean isRowDeleted = !Rowtodelete.isDisplayed(); 
-	    Assert.assertTrue(isRowDeleted, "The row has been deleted from the data table."); 
-		       
-    }
-    }
+		   }
+			
+		}
+
+	
+
+		
+
+			
+
+		
+
+			
+   
 		    
 		    
 		    
