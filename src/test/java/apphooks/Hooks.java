@@ -1,5 +1,7 @@
 package apphooks;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import java.io.File;
 
 import java.io.IOException;
@@ -23,12 +25,13 @@ TestContextSetup testContextSetup;
 		this.testContextSetup=testContextSetup;
 	}
 	
+	@BeforeMethod
 	@Before("@LoginPreCondition")
 	public void LogintoLMSPortal() {
 		
 	}
 	
-	@After
+	@AfterMethod
 	public void AfterScenario() throws IOException {
 		testContextSetup.testBase.WebDriverManager().quit();
 	}

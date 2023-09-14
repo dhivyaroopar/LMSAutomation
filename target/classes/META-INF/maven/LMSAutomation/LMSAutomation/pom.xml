@@ -218,7 +218,7 @@
 							<transformers>
 								<transformer
 									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>testrunners.MyTestRunner</mainClass>
+									<mainClass>testrunners.TestNGTestRunner</mainClass>
 								</transformer>
 							</transformers>
 						</configuration>
