@@ -9,6 +9,7 @@ import pages.PageObjectManager;
 public class TestContextSetup {
 	// sharing the states among multiple step definitions
 	// having this class to avoid creating objects in step defs using constructor
+	
 	public WebDriver driver;
 	public PageObjectManager pageObjectManager;
 	public TestBase testBase;

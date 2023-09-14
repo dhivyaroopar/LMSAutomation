@@ -22,10 +22,11 @@ Given Admin is on dashboard page after Login
 When Admin clicks "Class" button on the navigation bar
 Then Right arrow should be enabled in page two when entries are more than 10 available
 @Test79
-Scenario:Verify  left arrow is enable when sheet two is displayed in data table
+Scenario:Verify  left arrow is enable when sheet two is displayed in data table 
 Given Admin is on dashboard page after Login
 When Admin clicks "Class" button on the navigation bar
-Then Left arrow should be enabled in page two
+Then Left arrow should be enabled in page two  
+
 @Test80
 Scenario:Verify  right arrow is disable when sheet two is displayed in data table when entries are less than 10
 Given Admin is on dashboard page after Login

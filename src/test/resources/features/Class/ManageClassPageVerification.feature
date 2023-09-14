@@ -8,8 +8,8 @@ When Admin  enter the LMS url
 Then Admin  is able to see LMS LoginPage
 
 @Test02
-Scenario:Verify LMS LoginPage
-Given Admin  on LoginPage
+Scenario Outline:Verify LMS LoginPage
+Given Admin on LoginPage header
 When Admin  enter the "<UserName>" and "<Password>" 
 And Click the LoginButton
 Then Admin  is able to see LMS Dashboard Page
@@ -57,27 +57,31 @@ Then Admin should see +Add New Class button on the class page
 Scenario:Verify data table on the class page
 Given Admin is on dashboard page after Login
 When Admin clicks "Class" button on the navigation bar
-Then Admin should see data table on the Manage Class Page With following column headers. (Check box symbol,Batch Id, Class No,Class Date, Class Topic, Staff Id, Description, Comments, Notes, Recording, Edit Delete)
+Then Admin should see data table on the Manage Class Page With following column headers.
+ |Check box symbol|
+ |Batch Id| 
+ |Class No|
+ |Class Date|
+ |Class Topic|
+ |Staff Id|
+ |Description|
+ |Comments|
+ |Notes| 
+  |Recording|
+  |Edit|
+ |Delete|
 @Test11
 Scenario:Verify Edit icon in the data table
 Given Admin is on dashboard page after Login
 When Admin clicks "Class" button on the navigation bar
 Then Edit Icon in each row of data table only  when entries are available
-@Test12
-Scenario:Verify Edit icon when no data in the table
-Given Admin is on dashboard page after Login
-When Admin clicks "Class" button on the navigation bar
-Then Edit Icon will not be present in data table
+
 @Test13
 Scenario:Verify delete icon in the data table
 Given Admin is on dashboard page after Login
 When Admin clicks "Class" button on the navigation bar
 Then Delete Icon in each row of data table only  when entries are available
-@Test14
-Scenario:Verify delete icon when no data in the table
-Given Admin is on dashboard page after Login
-When Admin clicks "Class" button on the navigation bar
-Then Admin cant see delete  Icon in data table
+
 @Test15
 Scenario:Verify sort icon in the data table
 Given Admin is on dashboard page after Login

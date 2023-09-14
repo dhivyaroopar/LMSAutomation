@@ -11,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
+import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import utilities.TestContextSetup;
 
@@ -20,7 +21,13 @@ TestContextSetup testContextSetup;
 	public Hooks(TestContextSetup testContextSetup) {
 		this.testContextSetup=testContextSetup;
 	}
-	
+	/*@Before
+	public void openBrowser() throws InterruptedException, IOException {
+		
+		testContextSetup.pageObjectManager.getMainLoginPage().driver.LoginuserPass(testContextSetup.testBase.prop.getProperty("username"), 
+				testContextSetup.testBase.prop.getProperty("password"));
+		
+	}*/
 	@After
 	public void AfterScenario() throws IOException {
 		testContextSetup.testBase.WebDriverManager().quit();

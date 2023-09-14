@@ -10,16 +10,34 @@ When Admin clicks  Batch ID dropdown
 Then Batch id in the drop down should match with Batch id manage batch page table
 @Test31
 Scenario:Validate admin able to add new class with valid data in mandatory fields
-When Admin enters all mandatory field values with valid data and clicks save button ( Batch ID , No of Classes, Class Date, Staff Id)
+When Admin enters all mandatory field values with valid data and clicks save button 
+|Batch ID |
+|No of Classes|
+|Class Date|
+ |Staff Id|
 Then Admin should see new class details is added in the data table
 @Test32
 Scenario:Validate admin able to add new class with invalid data in mandatory fields
-When Admin enters all mandatory field values with invalid data and clicks save button ( Batch ID , No of Classes, Class Date, Staff Id, )
+When Admin enters all mandatory field values with invalid data and clicks save button 
+|Batch ID |
+|No of Classes|
+|Class Date|
+|Staff Id|
 Then Error message should appear in alert
 @Test33
 Scenario:Validate admin able to add new class with valid data  in all fields
-When Admin enters values in all fields with valid data and clicks save button (Batch ID , No of Classes, Class Date, Class Topic, Staff Id, Class description, Comments, Notes, Recordings)
+When Admin enters values in all fields with valid data and clicks save button 
 Then Admin should see new class details is added in the data table
+|ColumnHeader|
+|Batch ID|
+|No of Classes|
+|Class Date|
+|Class Topic|
+|Staff Id|
+|Class description|
+|Comments|
+|Notes|
+|Recordings|
 @Test34
 Scenario:Validate admin able to add new class with invalid data  in optional fields
 When Admin enters with invalid data in optional fields and clicks save button ( Class Topic,Class description, Comments, Notes, Recordings)
@@ -43,7 +61,7 @@ Then staff id is missing
 @Test39
 Scenario:Validate  admin able to add new class passing past date 
 When Admin enters passed date in the class date field and clicks save button ( Batch ID , No of Classes, Class Date, Staff Id)
-Then class cannot be  created for the passed date
+Then class cannot be  created for the passed date and error message come.
 @Test40
 Scenario:Validate date picker
 When Admin clicks date from date picker

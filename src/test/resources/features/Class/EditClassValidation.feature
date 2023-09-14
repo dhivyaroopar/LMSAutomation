@@ -55,7 +55,7 @@ Then staff id is missing
 Scenario:Validate  admin able to update class passing past date 
 Given Admin is in  Edit class detail popup window
 When Admin enters passed date in the class date field and clicks save button ( Batch ID , No of Classes, Class Date, Staff Id)
-Then class cannot be updated for the passed date
+Then class cannot be updated for the passed date and through error message.
 @Test59
 Scenario:Validate cancel button function in Edit class details popup window
 Given Admin is in  Edit class detail popup window
