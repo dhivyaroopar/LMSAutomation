@@ -1,3 +1,0 @@
-file:src/test/resources/features/IAttendance/07PaginationinManageAttendance.feature:7:11:15:19:23:27:31:35
-file:src/test/resources/features/IAttendance/08NavigationFunctionValidation.feature:6:10:14:18:22:26:30
-file:src/test/resources/features/IAttendance/05DeleteAttendanceValidation.feature:21:26

@@ -99,6 +99,20 @@
     <artifactId>commons-io</artifactId>
     <version>2.13.0</version>
 	</dependency>
+	
+	<dependency>
+    <groupId>javax.mail</groupId>
+    <artifactId>javax.mail-api</artifactId>
+    <version>1.6.2</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
+	<dependency>
+    <groupId>net.sourceforge.tess4j</groupId>
+    <artifactId>tess4j</artifactId>
+    <version>5.8.0</version>
+	</dependency>
+
 
 	
   </dependencies>
