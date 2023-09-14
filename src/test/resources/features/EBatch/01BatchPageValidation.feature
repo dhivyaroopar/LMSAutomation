@@ -15,12 +15,20 @@ Then Admin should see the "Manage Batch" in the header in batch
 Scenario: Validate pagination in the Batch Page
 Given Admin is on dashboard page after Login in batch
 When Admin clicks "Batch" from navigation bar in batch
-Then Admin should see the pagination controls under the data table in batch
+Then Admin should see the pagination controls "Showing x to y of z entries" and "In total there are z programs" under the data table in batch
 #4
-Scenario: Validate data table headers in the Batch Page
+Scenario Outline: Validate data table headers in the Batch Page
 Given Admin is on dashboard page after Login in batch
 When Admin clicks "Batch" from navigation bar in batch
-Then Admin Should see the data table with headers Batch name, Batch Description,Batch Status, No. of classes, Program Name, EditDelete in batch
+Then Admin Should see the data table with headers "Batch name, Batch Description,Batch Status, No. of classes, Program Name, EditDelete" in batch
+Examples:
+|coulumn headers|
+|Batch Name| 
+|Batch Description| 
+|Batch Status| 
+|No.of classes|
+|Edit|
+|Delete|
 #5
 Scenario: Validate Delete button in Batch Page
 Given Admin is on dashboard page after Login in batch

@@ -6,22 +6,37 @@ Scenario: Check if the fields exist in pop
 Given A new pop up with Batch details appears in batch
 Then The pop up should include the fields Name, Number of classes and Description as text box,Program Name as drop down,Status as radio button,Number of classes as text box in batch
 #2
-Scenario: Check if description is optional field
+Scenario Outline: Check if description is optional field
 Given A new pop up with Batch details appears in batch
-When Fill in all the fields except description with valid values in batch
-Then 	The newly added batch should be present in the data table in Manage Batch page in batch
+When Fill in all the fields "batch name","no of classes","program name","status" except description with valid values in batch
+Then The newly added batch "batchname" should be present in the data table in Manage Batch page in batch
+Examples:
+|Sheetname|RowNumber|
+|batch|1|
+
 #3
-Scenario: Check if the program details are added in data table
+Scenario Outline: Check if the program details are added in data table
 Given A new pop up with Batch details appears in batch
-When Fill in all the fields with valid values and click save in batch
-Then The newly added batch should be present in the data table in Manage Batch page in batch
+When Fill in all the fields with valid values "batch name","no of classes","program name","status","batch description" and click save in batch
+Then The newly added batch "batch name" should be present in the data table in Manage Batch page in batch
+Examples:
+|Sheetname|RowNumber|
+|batch|2|
 #4
-Scenario: Check for error messages for invalid fields
+Scenario Outline: Check for error messages for invalid fields
 Given A new pop up with Batch details appears in batch
-When any of the fields have invalid values in batch
-Then Error message should appear in batch
+When any of the fields have invalid values "batch name" and ,"no of classes","program name","status","batch description" as valid  in batch
+Then Error message should "cannot add batch" appear in batch
+Examples:
+|Sheetname|RowNumber|
+|batch|3|
+
 #5
-Scenario: Check for error messages for mandatory fields
+Scenario Outline: Check for error messages for mandatory fields
 Given A new pop up with Batch details appears in batch
-When Any of the mandatory fields are blank in batch
-Then  Error message should appear in batch
+When Any of the mandatory fields "batch name"are blank and valid "no of classes","program name","status","batch description" in batch
+Then  Error message should "cannot add batch" appear in batch
+Examples:
+|Sheetname|RowNumber|
+|batch|4|
+

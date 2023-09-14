@@ -43,7 +43,7 @@ Then Admin should see the number of records (rows of data in the table) displaye
 Scenario Outline: Verify data table on the Program page
 Given Admin is on dashboard page after Login in program
 When Admin clicks "Program" on the navigation bar in program
-Then Admin should see data table on the Manage Program Page with following column headers in program
+Then Admin should see data table on the Manage Program Page with column headers "Program Name,Program Description,Proram status,edit,delete"in program
 Examples:
 |coulumn headers|
 |Program Name| 
