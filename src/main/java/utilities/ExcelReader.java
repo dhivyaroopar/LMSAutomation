@@ -1,13 +1,13 @@
 package utilities;
-
+import java.io.FileInputStream;
 import java.io.File;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.*;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
@@ -19,11 +19,16 @@ import org.apache.poi.ss.util.NumberToTextConverter;
 
 public class ExcelReader {
 
+
 	public List<Map<String, String>> getData(String excelFilePath, String sheetName)
 			throws InvalidFormatException, IOException {
 		Sheet sheet = getSheetByName(excelFilePath, sheetName);
 		return readSheet(sheet);
 	}
+	
+	
+	
+	
 
 	public List<Map<String, String>> getData(String excelFilePath, int sheetNumber)
 			throws InvalidFormatException, IOException {
@@ -152,4 +157,11 @@ public class ExcelReader {
 		}
 		return columnMapdata;
 	}
+
+	//public List<Map<String, String>> getData(XLUtils xlutils, String sheetName) {
+	
+		//return null;
+	//}
+	
+
 }

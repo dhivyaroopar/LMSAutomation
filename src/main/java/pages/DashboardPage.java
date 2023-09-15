@@ -1,12 +1,20 @@
 package pages;
 
+import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.List;
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utilities.LoggerLoad;
 
+import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -40,6 +48,24 @@ public class DashboardPage {
 	@FindBy(id = "Assignment")private WebElement assignmnet;
 	@FindBy(id = "Attendance")private WebElement attendance;
 	@FindBy(id = "Logout")private WebElement logout;
+	@FindBy(xpath = "//h1[contains(text(),'Manage Program')]")
+	private WebElement manageProgramHeader;
+	@FindBy(xpath = "//body/div[@id='navigation']/div[1]/nav[1]/div[1]/ul/li")
+	public List<WebElement> NavigationMenuList;
+	
+	@FindBy(xpath ="//div[@id='nav-bar-links-area']")
+	public WebElement DashNavigationBar;
+	
+	public void navigationMenu(String menuName, Integer postionNo) 
+	{
+		WebElement eachmenu = driver.findElement(By.xpath("//body/div[@id='navigation']/div[1]/nav[1]/div[1]/ul/li["+postionNo+"]"));
+		if  (eachmenu.getText().contains(menuName))
+		{
+			Assert.assertTrue(true);
+		}
+		System.out.println("Admin seeing the menus appropriate postion" +menuName + " " + postionNo);
+	}
+
 	
 	public boolean dashboardPageTxt()
 	{
@@ -53,55 +79,32 @@ public class DashboardPage {
 	 public boolean isElementVisible(WebElement element) {
 	        return element.isDisplayed();
 	    }
-	 public void validateElements() {
-		   WebElement[] elements = {admin,student,program,batch,classele,user,assignmnet,attendance,logout};
-	        String[] Menunames = {"Admin","Student","Program","Batch","Class","User","Assignment","Attendance","Logout"};
-
-	        for (int i = 0; i < elements.length; i++) {
-	            String ordinal = getOrdinal(i + 1);
-	            boolean isVisible = isElementVisible(elements[i]);
-
-	            System.out.println(Menunames[i] + " in the " + ordinal + " place is visible: " + isVisible);
-	        }
-	    }
-	    
-	    private String getOrdinal(int number) {
-	        if (number >= 1 && number <= 10) {
-	            return number + "th";
-	        }
-
-	        switch (number % 10) {
-	            case 1:
-	                return number + "st";
-	            case 2:
-	                return number + "nd";
-	            case 3:
-	                return number + "rd";
-	            case 4:
-	                return number + "th";
-	            case 5:
-	                return number + "th";
-	            case 6:
-	                return number + "th";
-	            case 7:
-	                return number + "th";
-	            default:
-	                return number + "th";
-	        }
-	    }
-	public boolean verifyBrokenLink() {
-		String errorcode=badRequest.getText().split(" ")[0].trim();
-		int code=Integer.parseInt(errorcode);
-		if(code>=400) {
-			System.out.println("Link is broken");
+	 public boolean isManageProgramHeaderDisplayed() {
+		    return manageProgramHeader.isDisplayed();
 		}
-		return true;
+	
+
+		public boolean verifyBrokenLink() throws IOException {
+			WebElement element=driver.findElement(By.linkText("a"));
+			// using href attribute we can get url of required link
+			String url=element.getAttribute("href");
+			URL link=new URL(url);
+			HttpURLConnection httpConn=(HttpURLConnection) link.openConnection();
+			httpConn.connect();
+			int rescode=httpConn.getResponseCode();
+			if(rescode>400) {
+				System.out.println(url+" is a broken link");
+				return true;
+			}
+			else return false;
 	}
 
 public void clickLogin() {
 	logInBtn.click();
 }
-
+public void clickLogout() {
+	logout.click();
+}
     public  boolean istitleLeftCorner() {
     
         int titleXCoordinate = lmsTitleLocator.getLocation().getX();
@@ -168,15 +171,6 @@ public boolean navigationBarRightTopSide() {
 	return true;			
 }
 
-
-
-
-
-
-
-
-
-	
 	
 }
 

@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
@@ -26,11 +27,14 @@ public class DashboardPageStepDefinition {
 	public void admin_user_is_in_login_page() {
 		String titleOfThePage=testContextSetup.genericUtils.getTitleOfThePage();
 		Assert.assertEquals(titleOfThePage, "Login Page");
-		LoggerLoad.info("****Admin should land on login page***");
+		LoggerLoad.info("****Admin user is on login page***");
 	}
 
 	@When("Admin user enter valid {} with {}  and clicks login button")
 	public void admin_user_enter_valid_with_and_clicks_login_button(String string,String string2,DataTable dataTable) {
+		
+		
+		
 		List<Map<String, String>> credList = dataTable.asMaps();
 		String username = credList.get(0).get("username");
 		String password = credList.get(0).get("password");
@@ -40,7 +44,12 @@ public class DashboardPageStepDefinition {
 
 	@Then("Admin should see manage program as header")
 	public void admin_should_see_manage_program_as_header() {
-		dashBoardPage.dashboardPageTxt();
+	
+		 if (dashBoardPage.isManageProgramHeaderDisplayed()) {
+			 LoggerLoad.info("Manage Program header is displayed!");
+		    } else {
+		    	 LoggerLoad.info("Manage Program header is not displayed.");
+		    }
 	}
 
 	@Then("Maximum navigation time in milliseconds, defaults to {int} seconds")
@@ -51,8 +60,8 @@ public class DashboardPageStepDefinition {
 	}
 
 	 @Then ("HTTP response >={int}.The link boken")
-	   public void http_response_the_link_broken() {
-		 dashBoardPage.verifyBrokenLink();
+	   public void http_response_the_link_broken() throws IOException {
+		 testContextSetup.genericUtils.verifyBrokenLink();
 		   LoggerLoad.info("**** 400 Dashboard page broken link ***");
 	   }
 	   
@@ -88,71 +97,75 @@ public class DashboardPageStepDefinition {
 		dashBoardPage.navigationBarRightTopSide();
 		LoggerLoad.info("****Navigation Bar top right***");
 	}
-
-	@Then("Admin should see student in the 1st place")
-	public void admin_should_see_student_in_the_1st_place() {
-		dashBoardPage.validateElements();
-		LoggerLoad.info("****Admin in 1st***");
+	
+	@Then("Admin should see student in the 1st place {string} and {int}")
+	public void admin_should_see_student_in_the_1st_place_and(String Menuname,Integer Position_no ) {
+		dashBoardPage.navigationMenu(Menuname, Position_no);
+			LoggerLoad.info("****Admin in 1st***");
 	}
+	
 
-	@Then("Admin should see program in the 2nd place")
-	public void admin_should_see_program_in_the_2nd_place() {
-		dashBoardPage.validateElements();
+	@Then("Admin should see program in the 2nd place {string} and {int}")
+	public void admin_should_see_program_in_the_2nd_place_and(String Menuname,Integer Position_no) {
+		dashBoardPage.navigationMenu(Menuname, Position_no);
 		LoggerLoad.info("****Admin in 2nd***");
 	}
 
-	@Then("Admin should see batch in the 3rd place")
-	public void admin_should_see_batch_in_the_3rd_place() {
-		dashBoardPage.validateElements();
+	@Then("Admin should see batch in the 3rd place {string} and {int}")
+	public void admin_should_see_batch_in_the_3rd_place_and(String Menuname,Integer Position_no) {
+		dashBoardPage.navigationMenu(Menuname, Position_no);
 		LoggerLoad.info("****Admin in 3rd***");
 	}
 
-	@Then("Admin should see class in the 4th place")
-	public void admin_should_see_class_in_the_4th_place() {
-		dashBoardPage.validateElements();
+	@Then("Admin should see class in the 4th place {string} and {int}")
+	public void admin_should_see_class_in_the_4th_place_and(String Menuname,Integer Position_no){
+		dashBoardPage.navigationMenu(Menuname, Position_no);
 		LoggerLoad.info("****Admin in 4th***");
 	}
 
-	@Then("Admin should see student in the  5th user")
-	public void admin_should_see_student_in_the_5th_user() {
-		dashBoardPage.validateElements();
+	@Then("Admin should see student in the  5th user {string} and {int}")
+	public void admin_should_see_student_in_the_5th_user(String Menuname,Integer Position_no) {
+		dashBoardPage.navigationMenu(Menuname, Position_no);
 		LoggerLoad.info("****Admin in 5th***");
 	}
 
-	@Then("Admin should see student in the  6th attendance")
-	public void admin_should_see_student_in_the_6th_attendance() {
-		dashBoardPage.validateElements();
+	@Then("Admin should see student in the  6th attendance {string} and {int}")
+	public void admin_should_see_student_in_the_6th_attendance(String Menuname,Integer Position_no) {
+		dashBoardPage.navigationMenu(Menuname, Position_no);
+				
 		LoggerLoad.info("****Admin in 6th***");
 	}
 
-	@Then("Admin should see student in the  7th attendance")
-	public void admin_should_see_student_in_the_7th_attendance() {
-		dashBoardPage.validateElements();
+	@Then("Admin should see student in the  7th attendance {string} and {int}")
+	public void admin_should_see_student_in_the_7th_attendance(String Menuname,Integer Position_no) {
+		dashBoardPage.navigationMenu(Menuname, Position_no);
 		LoggerLoad.info("****Admin in 7th***");
 	}
 
-	@Then("Admin should see student in the 8th logout")
-	public void admin_should_see_student_in_the_8th_logout() {
-		dashBoardPage.validateElements();
+	@Then("Admin should see student in the 8th logout {string} and {int}")
+	public void admin_should_see_student_in_the_8th_logout(String Menuname,Integer Position_no) {
+		dashBoardPage.navigationMenu(Menuname, Position_no);
 		LoggerLoad.info("****Admin in 8th***");
 	}
 
 	@Given("Admin is in dashboard page")
 	public void admin_is_in_dashboard_page() {
-	    
+		String titleOfThePage=testContextSetup.genericUtils.getTitleOfThePage();
+		Assert.assertEquals(titleOfThePage, "Dashboard Page");
+		LoggerLoad.info("****Admin is in dashboard page***");
 	}
 
 	@When("Admin click Logout button on navigation bar")
 	public void admin_click_logout_button_on_navigation_bar() {
-	   
+		dashBoardPage.clickLogout();
 	}
 
 	@Then("Admin should land on login in page")
 	public void admin_should_land_on_login_in_page() {
-	    
+		String titleOfThePage=testContextSetup.genericUtils.getTitleOfThePage();
+		Assert.assertEquals(titleOfThePage, "Login Page");
+		LoggerLoad.info("****Admin should land on login page***");
 	}
 
-	
-	
 
 }

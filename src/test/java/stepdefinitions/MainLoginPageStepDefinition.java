@@ -2,15 +2,11 @@ package stepdefinitions;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
-import java.util.List;
-import java.util.Map;
+
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-
-import utilities.ExcelReader;
-
 import io.cucumber.java.en.*;
 
 import pages.ForgotUsernamePasswordPage;
@@ -29,7 +25,7 @@ public class MainLoginPageStepDefinition {
 	ResetPasswordPage resetPasswordPage;
 	public int statuscode;
 	public HttpURLConnection httpURLConnection;
-	ExcelReader reader;
+
 	
 	public MainLoginPageStepDefinition(TestContextSetup testContextSetup) {
 		this.testContextSetup=testContextSetup;
@@ -38,13 +34,7 @@ public class MainLoginPageStepDefinition {
 		this.forgotUsernamePasswordPage=testContextSetup.pageObjectManager.getforgotUsernamePasswordPage();
 		this.resetPasswordPage=testContextSetup.pageObjectManager.getResetPwdPage();
 	}
-	String xlPath=System.getProperty(("user.dir")+"//LMSAutomation//DataSet//TestData.xlsx");
-	public void readingData(String sheetName,Integer rowNumber) throws InvalidFormatException, IOException {
-	List<Map<String,String>>testData =reader.getData(xlPath,sheetName);
-	String uName = testData.get(rowNumber).get("UserName");
-	String pwd = testData.get(rowNumber).get("PassWord");
-	loginPage.enterCredentials(uName,pwd);
-	}
+	
 
 	//*****************Home Page Verification************************ 
 	
@@ -266,7 +256,8 @@ public void admin_is_in_login_page() {
 
 @When("Admin enter valid username {string} and  valid password {int}")
 public void admin_enter_valid_username_and_valid_password(String sheetName ,Integer rowNumber) throws InvalidFormatException, IOException {
-	readingData(sheetName,rowNumber);
+
+	testContextSetup.genericUtils.readingData(sheetName,rowNumber);
 	LoggerLoad.info("****Admin enter valid credential***");
 }
 
@@ -294,7 +285,7 @@ public void user_clicks_login_button_through_mouse() {
 @When("Admin enter invalid username {string} and  invalid password {int}")
 public void admin_enter_invalid_username_and_invalid_password(String sheetName, Integer rowNumber) throws InvalidFormatException, IOException {
 	
-	readingData(sheetName,rowNumber);
+	testContextSetup.genericUtils.readingData(sheetName,rowNumber);
 	LoggerLoad.info("****Admin enter invalid credential***");
 }
 
@@ -311,7 +302,7 @@ public void error_message_please_check_username_password() {
 
 @When("Admin enter blank username {string} and  valid password {int}")
 public void admin_enter_blank_username_and_valid_password(String sheetName, Integer rowNumber) throws InvalidFormatException, IOException {
-	readingData(sheetName,rowNumber);
+	testContextSetup.genericUtils.readingData(sheetName,rowNumber);
 	LoggerLoad.info("****blank username and valid password ***");
 		
 }
@@ -319,7 +310,7 @@ public void admin_enter_blank_username_and_valid_password(String sheetName, Inte
 
 @When("Admin enter valid username {string} and  blank password {int}")
 public void admin_enter_valid_username_and_blank_password(String sheetName, Integer rowNumber) throws InvalidFormatException, IOException {
-	readingData(sheetName,rowNumber);
+	testContextSetup.genericUtils.readingData(sheetName,rowNumber);
 	LoggerLoad.info("**** valid username blank password***");
 }
 
@@ -327,13 +318,13 @@ public void admin_enter_valid_username_and_blank_password(String sheetName, Inte
 
 @When("Admin enter valid username {string} and  invalid password {int}")
 public void admin_enter_valid_username_and_invalid_password(String sheetName, Integer rowNumber) throws InvalidFormatException, IOException {
-	readingData(sheetName,rowNumber);
+	testContextSetup.genericUtils.readingData(sheetName,rowNumber);
 	LoggerLoad.info("**** valid username invalid password***");
 }
 
 @When("Admin enter invalid username {string} and  valid password {int}")
 public void admin_enter_invalid_username_and_valid_password(String sheetName, Integer rowNumber) throws InvalidFormatException, IOException {
-	readingData(sheetName,rowNumber);
+	testContextSetup.genericUtils.readingData(sheetName,rowNumber);
 	LoggerLoad.info("**** invalid username valid password***");
 }
 
@@ -341,7 +332,7 @@ public void admin_enter_invalid_username_and_valid_password(String sheetName, In
 
 @When("Admin clicks login button with blank username {string} and  blank password {int}")
 public void admin_clicks_login_button_with_blank_username_and_blank_password(String sheetName, Integer rowNumber) throws InvalidFormatException, IOException {
-	readingData(sheetName,rowNumber);
+	testContextSetup.genericUtils.readingData(sheetName,rowNumber);
 	LoggerLoad.info("**** blank username blank password***");
 }
 
@@ -513,7 +504,7 @@ public void admin_clicks_on_retype_password_field() {
 
 @When("Admin enters same password from {string} and {int} in both field")
 public void admin_enters_same_password_from_and_in_both_field(String SheetName, Integer RowNumber) throws InvalidFormatException, IOException {
-	readingData(SheetName,RowNumber);
+	testContextSetup.genericUtils.readingData(SheetName,RowNumber);
 	LoggerLoad.info("Same password entered ");
 }
 
@@ -533,7 +524,7 @@ public void admin_should_recieve_please_click_here_to_login(String expErrMessage
 
 @When("Admin enters  invalid password from {string} and {int} in both field")
 public void admin_enters_invalid_password_from_and_in_both_field(String SheetName, Integer RowNumber) throws InvalidFormatException, IOException {
-	readingData(SheetName,RowNumber);
+	testContextSetup.genericUtils.readingData(SheetName,RowNumber);
 	LoggerLoad.info("Invalid password entered ");
 }
 
@@ -551,7 +542,7 @@ public void admin_clicks_submit_button_error_message_will_be(String expErrMessag
 
 @When("Admin doesnot enter  any passwords from {string} and {int}")
 public void admin_doesnot_enter_any_passwords_from_and(String SheetName, Integer RowNumber) throws InvalidFormatException, IOException {
-	readingData(SheetName,RowNumber);
+	testContextSetup.genericUtils.readingData(SheetName,RowNumber);
 	LoggerLoad.info("No Entry");
 }
 
@@ -559,7 +550,7 @@ public void admin_doesnot_enter_any_passwords_from_and(String SheetName, Integer
 
 @When("Admin enters  mismatch values from {string} and {int}")
 public void admin_enters_mismatch_values_from_and(String SheetName, Integer RowNumber) throws InvalidFormatException, IOException {
-	readingData(SheetName,RowNumber);
+	testContextSetup.genericUtils.readingData(SheetName,RowNumber);
 	LoggerLoad.info("Mismatch value");
 }
 
